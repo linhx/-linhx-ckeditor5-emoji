@@ -1,13 +1,13 @@
 {
 	"plugins": [
 		{
-			"name": "My plugin",
-			"className": "MyPlugin",
-			"description": "Adds text to the editor.",
-			"path": "src/myplugin.ts",
+			"name": "Ckeditor emoji",
+			"className": "Emoji",
+			"description": "Adds custom emoji to the editor.",
+			"path": "src/emoji.ts",
 			"uiComponents": [
 				{
-					"name": "myButton",
+					"name": "emoji",
 					"type": "Button",
 					"iconPath": "theme/icons/ckeditor.svg"
 				}

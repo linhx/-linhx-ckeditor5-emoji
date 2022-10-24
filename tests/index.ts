@@ -1,12 +1,11 @@
 import { expect } from 'chai';
-import { MyPlugin as MyPluginDll, icons } from '../src';
-import MyPlugin from '../src/myplugin';
-
+import { Emoji as EmojiDll, icons } from '../src';
+import Emoji from '../src/emoji';
 import ckeditor from './../theme/icons/ckeditor.svg';
 
-describe( 'CKEditor5 MyPlugin DLL', () => {
-	it( 'exports MyPlugin', () => {
-		expect( MyPluginDll ).to.equal( MyPlugin );
+describe( 'CKEditor5 Emoji DLL', () => {
+	it( 'exports Emoji', () => {
+		expect( EmojiDll ).to.equal( Emoji );
 	} );
 
 	describe( 'icons', () => {

@@ -3,16 +3,16 @@ import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-import MyPlugin from '../src/myplugin';
+import Emoji from '../src/emoji';
 
 import type { EditorWithUI } from 'ckeditor__ckeditor5-core/src/editor/editorwithui';
 import type { DataApi } from 'ckeditor__ckeditor5-core/src/editor/utils/dataapimixin';
 
 interface Editor extends EditorWithUI, DataApi {}
 
-describe( 'MyPlugin', () => {
+describe( 'Emoji', () => {
 	it( 'should be named', () => {
-		expect( MyPlugin.pluginName ).to.equal( 'MyPlugin' );
+		expect( Emoji.pluginName ).to.equal( 'Emoji' );
 	} );
 
 	describe( 'init()', () => {
@@ -27,10 +27,10 @@ describe( 'MyPlugin', () => {
 					Paragraph,
 					Heading,
 					Essentials,
-					MyPlugin
+					Emoji
 				],
 				toolbar: [
-					'myButton'
+					'emoji'
 				]
 			} );
 		} );
@@ -40,18 +40,18 @@ describe( 'MyPlugin', () => {
 			return editor.destroy();
 		} );
 
-		it( 'should load MyPlugin', () => {
-			const myPlugin = editor.plugins.get( 'MyPlugin' );
+		it( 'should load Emoji', () => {
+			const emojiPlugin = editor.plugins.get( 'Emoji' );
 
-			expect( myPlugin ).to.be.an.instanceof( MyPlugin );
+			expect( emojiPlugin ).to.be.an.instanceof( Emoji );
 		} );
 
 		it( 'should add an icon to the toolbar', () => {
-			expect( editor.ui.componentFactory.has( 'myButton' ) ).to.equal( true );
+			expect( editor.ui.componentFactory.has( 'emoji' ) ).to.equal( true );
 		} );
 
 		it( 'should add a text into the editor after clicking the icon', () => {
-			const icon = editor.ui.componentFactory.create( 'myButton' );
+			const icon = editor.ui.componentFactory.create( 'emoji' );
 
 			expect( editor.getData() ).to.equal( '' );
 
