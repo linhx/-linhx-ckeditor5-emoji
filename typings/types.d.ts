@@ -10,3 +10,11 @@ declare module 'ckeditor5/src/core' {
 declare module 'ckeditor5/src/ui' {
 	export * from 'ckeditor__ckeditor5-ui';
 }
+
+declare module 'ckeditor5/src/utils' {
+	export * from 'ckeditor__ckeditor5-utils';
+}
+
+declare module 'ckeditor5/src/ui/template' {
+	export * from 'ckeditor__ckeditor5-ui/src/template';
+}

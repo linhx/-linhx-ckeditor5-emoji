@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { Emoji as EmojiDll, icons } from '../src';
 import Emoji from '../src/emoji';
-import ckeditor from './../theme/icons/ckeditor.svg';
+import ckeditor from './../theme/icons/grining.svg';
 
 describe( 'CKEditor5 Emoji DLL', () => {
 	it( 'exports Emoji', () => {

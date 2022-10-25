@@ -1,8 +1,11 @@
 import { Plugin } from 'ckeditor5/src/core';
-
-const CLASS_PREFIX = 'ap ap-';
+import { EMOJI_CLASS_PREFIX } from './constants';
 
 export default class EmojiEditing extends Plugin {
+	public static override get pluginName(): string {
+		return 'EmojiEditing';
+	}
+
 	public override init(): void {
 		this._defineSchema();
 		this._defineConverters();
@@ -26,7 +29,7 @@ export default class EmojiEditing extends Plugin {
 				const { writer } = conversionApi;
 
 				return writer.createAttributeElement( 'emoji', {
-					class: `${ CLASS_PREFIX }${ element.getAttribute( 'emojiName' ) }`
+					class: `${ EMOJI_CLASS_PREFIX }${ element.getAttribute( 'emojiName' ) }`
 				} );
 			}
 		} );
@@ -39,7 +42,7 @@ export default class EmojiEditing extends Plugin {
 			model: ( viewElement, { writer: modelWriter } ) => {
 				const clazz = viewElement.getAttribute( 'class' );
 
-				const emojiName = clazz?.substring( CLASS_PREFIX.length ) || '';
+				const emojiName = clazz ? clazz.substring( EMOJI_CLASS_PREFIX.length ) : '';
 				return modelWriter.createElement( 'emoji', { emojiName } );
 			}
 		} );

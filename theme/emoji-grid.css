@@ -1,0 +1,12 @@
+.emoji.emoji-grid__tiles {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(25px * 15);
+	height: calc(25px * 10);
+	overflow: auto;
+}
+
+.emoji.emoji-grid__tiles .em {
+	width: 25px;
+	height: 25px;
+}
