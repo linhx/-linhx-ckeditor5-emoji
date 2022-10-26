@@ -1,12 +1,29 @@
+
 .emoji.emoji-grid__tiles {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-gap: 0;
+	align-content: flex-start;
+	grid-template-columns: repeat(15, minmax(0, 1fr));
 	width: calc(25px * 15);
 	height: calc(25px * 10);
 	overflow: auto;
+	overflow-y: overlay;
+	font-size: 18px;
+}
+.emoji.emoji-grid__tiles::-webkit-scrollbar {
+	display: none;
 }
 
-.emoji.emoji-grid__tiles .em {
-	width: 25px;
-	height: 25px;
+.emoji.emoji-grid__tiles > .em {
+	width: 1.5em;
+	height: 1.5em;
+	min-width: 1.5em;
+	min-height: 1.5em;
+	background-size: calc(
+		1.5em / var(--emoji-original-size) *
+				var(--spritesheet-width)
+		)
+		auto;
+	padding: 0;
+	border: 0;
 }

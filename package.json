@@ -1,6 +1,6 @@
 {
   "name": "@linhx/ckeditor5-emoji",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A plugin for CKEditor 5.",
   "keywords": [
     "ckeditor",
@@ -48,6 +48,7 @@
     "@ckeditor/ckeditor5-table": ">=35.2.1",
     "@ckeditor/ckeditor5-theme-lark": ">=35.2.1",
     "@ckeditor/ckeditor5-upload": ">=35.2.1",
+    "@ckeditor/ckeditor5-widget": "^35.2.1",
     "@types/chai": "^4.3.1",
     "@types/ckeditor__ckeditor5-autoformat": "latest",
     "@types/ckeditor__ckeditor5-basic-styles": "latest",
@@ -61,10 +62,10 @@
     "@types/ckeditor__ckeditor5-indent": "latest",
     "@types/ckeditor__ckeditor5-link": "latest",
     "@types/ckeditor__ckeditor5-list": "latest",
-    "@types/ckeditor__ckeditor5-ui": "latest",
     "@types/ckeditor__ckeditor5-media-embed": "latest",
     "@types/ckeditor__ckeditor5-paragraph": "latest",
     "@types/ckeditor__ckeditor5-table": "latest",
+    "@types/ckeditor__ckeditor5-ui": "latest",
     "@types/ckeditor__ckeditor5-upload": "latest",
     "@types/mocha": "^9.1.1",
     "@types/node": "^17.0.23",

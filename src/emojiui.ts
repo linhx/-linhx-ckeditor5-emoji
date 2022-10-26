@@ -1,4 +1,4 @@
-import { ButtonView, createDropdown } from 'ckeditor5/src/ui';
+import { createDropdown } from 'ckeditor5/src/ui';
 import { Plugin, type Editor } from 'ckeditor5/src/core';
 import type { Locale } from 'ckeditor5/src/utils';
 import type { EditorWithUI } from 'ckeditor__ckeditor5-core/src/editor/editorwithui';
@@ -62,6 +62,7 @@ export default class EmojiUI extends Plugin {
 
 				if ( !newValue ) {
 					dropdownPanelContent.navigationView.setSelectedGroup( DEFAULT_GROUP );
+					this._updateGrid( DEFAULT_GROUP, dropdownPanelContent.gridView );
 				}
 			} );
 			return dropdownView;
@@ -81,16 +82,12 @@ export default class EmojiUI extends Plugin {
 
 		const characterTitles = this.getEmojisForGroup( currentGroupName );
 
-		console.log('characterTitles', characterTitles)
-
 		if ( !characterTitles ) {
 			return;
 		}
 
 		for ( const name of characterTitles ) {
 			const character = this.getEmoji( name );
-			console.log('character', character)
-
 			if ( character ) {
 				gridView.addTitle( gridView.createTile( character, name ) );
 			}

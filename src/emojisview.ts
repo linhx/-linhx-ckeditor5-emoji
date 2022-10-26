@@ -4,6 +4,8 @@ import {
 	type ViewCollection
 } from 'ckeditor5/src/ui';
 
+import '../theme/emojis-dropdown.css';
+
 export default class EmojisView extends View {
 	private items: ViewCollection<View>;
 	private focusTracker: FocusTracker;
@@ -25,7 +27,8 @@ export default class EmojisView extends View {
 				this.gridView
 			],
 			attributes: {
-				tabindex: '-1'
+				tabindex: '-1',
+				class: 'emojis-dropdown'
 			}
 		} );
 

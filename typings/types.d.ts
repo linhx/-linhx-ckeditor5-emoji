@@ -18,3 +18,11 @@ declare module 'ckeditor5/src/utils' {
 declare module 'ckeditor5/src/ui/template' {
 	export * from 'ckeditor__ckeditor5-ui/src/template';
 }
+
+declare module 'ckeditor5/src/widget' {
+	export * from 'ckeditor__ckeditor5-widget';
+}
+
+declare module 'ckeditor5/src/engine' {
+	export * from 'ckeditor__ckeditor5-engine';
+}

@@ -1,3548 +1,3569 @@
-.em {
-  background: url('emojis.png') no-repeat top left;
-  width: 72px;
-  height: 72px;
+:root {
+	--spritesheet-width: 2520;
+	--spritesheet-height: 2520;
+	--emoji-original-size: 72;
+	--display-emoji-size: 1.5em;
 }
+
+.emoji.emoji-grid__tiles > .em,
+.ck-editor__main .em {
+	background-image: url("/emojis.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.ck-editor__main .em {
+	width: var(--display-emoji-size);
+	height: var(--display-emoji-size);
+	background-size: calc(
+			var(--display-emoji-size) / var(--emoji-original-size) *
+				var(--spritesheet-width)
+		)
+		auto;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
 .em.em-grinning-face {
-  background-position: 0 0;
+	background-position: 0 0;
 }
 .em.em-grinning-face-with-big-eyes {
-  background-position: -72px 0;
+	background-position: calc(-1 * 1.5em) 0;
 }
 .em.em-grinning-face-with-smiling-eyes {
-  background-position: 0 -72px;
+	background-position: 0 calc(-1 * 1.5em);
 }
 .em.em-beaming-face-with-smiling-eyes {
-  background-position: -72px -72px;
+	background-position: calc(-1 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-grinning-squinting-face {
-  background-position: -144px 0;
+	background-position: calc(-2 * 1.5em) 0;
 }
 .em.em-grinning-face-with-sweat {
-  background-position: -144px -72px;
+	background-position: calc(-2 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-face-with-tears-of-joy {
-  background-position: 0 -144px;
+	background-position: 0 calc(-2 * 1.5em);
 }
 .em.em-slightly-smiling-face {
-  background-position: -72px -144px;
+	background-position: calc(-1 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-winking-face {
-  background-position: -144px -144px;
+	background-position: calc(-2 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-smiling-face-with-smiling-eyes {
-  background-position: -216px 0;
+	background-position: calc(-3 * 1.5em) 0;
 }
 .em.em-smiling-face-with-halo {
-  background-position: -216px -72px;
+	background-position: calc(-3 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-smiling-face-with-heart-eyes {
-  background-position: -216px -144px;
+	background-position: calc(-3 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-face-blowing-a-kiss {
-  background-position: 0 -216px;
+	background-position: 0 calc(-3 * 1.5em);
 }
 .em.em-kissing-face {
-  background-position: -72px -216px;
+	background-position: calc(-1 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-smiling-face {
-  background-position: -144px -216px;
+	background-position: calc(-2 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-kissing-face-with-closed-eyes {
-  background-position: -216px -216px;
+	background-position: calc(-3 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-kissing-face-with-smiling-eyes {
-  background-position: -288px 0;
+	background-position: calc(-4 * 1.5em) 0;
 }
 .em.em-face-savoring-food {
-  background-position: -288px -72px;
+	background-position: calc(-4 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-face-with-tongue {
-  background-position: -288px -144px;
+	background-position: calc(-4 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-winking-face-with-tongue {
-  background-position: -288px -216px;
+	background-position: calc(-4 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-squinting-face-with-tongue {
-  background-position: 0 -288px;
+	background-position: 0 calc(-4 * 1.5em);
 }
 .em.em-neutral-face {
-  background-position: -72px -288px;
+	background-position: calc(-1 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-expressionless-face {
-  background-position: -144px -288px;
+	background-position: calc(-2 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-face-without-mouth {
-  background-position: -216px -288px;
+	background-position: calc(-3 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-smirking-face {
-  background-position: -288px -288px;
+	background-position: calc(-4 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-unamused-face {
-  background-position: -360px 0;
+	background-position: calc(-5 * 1.5em) 0;
 }
 .em.em-grimacing-face {
-  background-position: -360px -72px;
+	background-position: calc(-5 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-relieved-face {
-  background-position: -360px -144px;
+	background-position: calc(-5 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-pensive-face {
-  background-position: -360px -216px;
+	background-position: calc(-5 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-sleepy-face {
-  background-position: -360px -288px;
+	background-position: calc(-5 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-sleeping-face {
-  background-position: 0 -360px;
+	background-position: 0 calc(-5 * 1.5em);
 }
 .em.em-face-with-medical-mask {
-  background-position: -72px -360px;
+	background-position: calc(-1 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-dizzy-face {
-  background-position: -144px -360px;
+	background-position: calc(-2 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-smiling-face-with-sunglasses {
-  background-position: -216px -360px;
+	background-position: calc(-3 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-confused-face {
-  background-position: -288px -360px;
+	background-position: calc(-4 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-worried-face {
-  background-position: -360px -360px;
+	background-position: calc(-5 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-face-with-open-mouth {
-  background-position: -432px 0;
+	background-position: calc(-6 * 1.5em) 0;
 }
 .em.em-hushed-face {
-  background-position: -432px -72px;
+	background-position: calc(-6 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-astonished-face {
-  background-position: -432px -144px;
+	background-position: calc(-6 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-flushed-face {
-  background-position: -432px -216px;
+	background-position: calc(-6 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-frowning-face-with-open-mouth {
-  background-position: -432px -288px;
+	background-position: calc(-6 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-anguished-face {
-  background-position: -432px -360px;
+	background-position: calc(-6 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-fearful-face {
-  background-position: 0 -432px;
+	background-position: 0 calc(-6 * 1.5em);
 }
 .em.em-anxious-face-with-sweat {
-  background-position: -72px -432px;
+	background-position: calc(-1 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-sad-but-relieved-face {
-  background-position: -144px -432px;
+	background-position: calc(-2 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-crying-face {
-  background-position: -216px -432px;
+	background-position: calc(-3 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-loudly-crying-face {
-  background-position: -288px -432px;
+	background-position: calc(-4 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-face-screaming-in-fear {
-  background-position: -360px -432px;
+	background-position: calc(-5 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-confounded-face {
-  background-position: -432px -432px;
+	background-position: calc(-6 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-persevering-face {
-  background-position: -504px 0;
+	background-position: calc(-7 * 1.5em) 0;
 }
 .em.em-disappointed-face {
-  background-position: -504px -72px;
+	background-position: calc(-7 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-downcast-face-with-sweat {
-  background-position: -504px -144px;
+	background-position: calc(-7 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-weary-face {
-  background-position: -504px -216px;
+	background-position: calc(-7 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-tired-face {
-  background-position: -504px -288px;
+	background-position: calc(-7 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-face-with-steam-from-nose {
-  background-position: -504px -360px;
+	background-position: calc(-7 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-pouting-face {
-  background-position: -504px -432px;
+	background-position: calc(-7 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-angry-face {
-  background-position: 0 -504px;
+	background-position: 0 calc(-7 * 1.5em);
 }
 .em.em-smiling-face-with-horns {
-  background-position: -72px -504px;
+	background-position: calc(-1 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-angry-face-with-horns {
-  background-position: -144px -504px;
+	background-position: calc(-2 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-skull {
-  background-position: -216px -504px;
+	background-position: calc(-3 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-pile-of-poo {
-  background-position: -288px -504px;
+	background-position: calc(-4 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-ogre {
-  background-position: -360px -504px;
+	background-position: calc(-5 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-goblin {
-  background-position: -432px -504px;
+	background-position: calc(-6 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-ghost {
-  background-position: -504px -504px;
+	background-position: calc(-7 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-alien {
-  background-position: -576px 0;
+	background-position: calc(-8 * 1.5em) 0;
 }
 .em.em-alien-monster {
-  background-position: -576px -72px;
+	background-position: calc(-8 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-grinning-cat {
-  background-position: -576px -144px;
+	background-position: calc(-8 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-grinning-cat-with-smiling-eyes {
-  background-position: -576px -216px;
+	background-position: calc(-8 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-cat-with-tears-of-joy {
-  background-position: -576px -288px;
+	background-position: calc(-8 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-smiling-cat-with-heart-eyes {
-  background-position: -576px -360px;
+	background-position: calc(-8 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-cat-with-wry-smile {
-  background-position: -576px -432px;
+	background-position: calc(-8 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-kissing-cat {
-  background-position: -576px -504px;
+	background-position: calc(-8 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-weary-cat {
-  background-position: 0 -576px;
+	background-position: 0 calc(-8 * 1.5em);
 }
 .em.em-crying-cat {
-  background-position: -72px -576px;
+	background-position: calc(-1 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-pouting-cat {
-  background-position: -144px -576px;
+	background-position: calc(-2 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-see-no-evil-monkey {
-  background-position: -216px -576px;
+	background-position: calc(-3 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-hear-no-evil-monkey {
-  background-position: -288px -576px;
+	background-position: calc(-4 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-speak-no-evil-monkey {
-  background-position: -360px -576px;
+	background-position: calc(-5 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-kiss-mark {
-  background-position: -432px -576px;
+	background-position: calc(-6 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-love-letter {
-  background-position: -504px -576px;
+	background-position: calc(-7 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-heart-with-arrow {
-  background-position: -576px -576px;
+	background-position: calc(-8 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-heart-with-ribbon {
-  background-position: -648px 0;
+	background-position: calc(-9 * 1.5em) 0;
 }
 .em.em-sparkling-heart {
-  background-position: -648px -72px;
+	background-position: calc(-9 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-growing-heart {
-  background-position: -648px -144px;
+	background-position: calc(-9 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-beating-heart {
-  background-position: -648px -216px;
+	background-position: calc(-9 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-revolving-hearts {
-  background-position: -648px -288px;
+	background-position: calc(-9 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-two-hearts {
-  background-position: -648px -360px;
+	background-position: calc(-9 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-heart-decoration {
-  background-position: -648px -432px;
+	background-position: calc(-9 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-broken-heart {
-  background-position: -648px -504px;
+	background-position: calc(-9 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-red-heart {
-  background-position: -648px -576px;
+	background-position: calc(-9 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-yellow-heart {
-  background-position: 0 -648px;
+	background-position: 0 calc(-9 * 1.5em);
 }
 .em.em-green-heart {
-  background-position: -72px -648px;
+	background-position: calc(-1 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-blue-heart {
-  background-position: -144px -648px;
+	background-position: calc(-2 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-purple-heart {
-  background-position: -216px -648px;
+	background-position: calc(-3 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-hundred-points {
-  background-position: -288px -648px;
+	background-position: calc(-4 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-anger-symbol {
-  background-position: -360px -648px;
+	background-position: calc(-5 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-collision {
-  background-position: -432px -648px;
+	background-position: calc(-6 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-dizzy {
-  background-position: -504px -648px;
+	background-position: calc(-7 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-sweat-droplets {
-  background-position: -576px -648px;
+	background-position: calc(-8 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-dashing-away {
-  background-position: -648px -648px;
+	background-position: calc(-9 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-bomb {
-  background-position: -720px 0;
+	background-position: calc(-10 * 1.5em) 0;
 }
 .em.em-speech-balloon {
-  background-position: -720px -72px;
+	background-position: calc(-10 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-thought-balloon {
-  background-position: -720px -144px;
+	background-position: calc(-10 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-zzz {
-  background-position: -720px -216px;
+	background-position: calc(-10 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-waving-hand {
-  background-position: -720px -288px;
+	background-position: calc(-10 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-waving-hand-light-skin-tone {
-  background-position: -720px -360px;
+	background-position: calc(-10 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-waving-hand-medium-light-skin-tone {
-  background-position: -720px -432px;
+	background-position: calc(-10 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-waving-hand-medium-skin-tone {
-  background-position: -720px -504px;
+	background-position: calc(-10 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-waving-hand-medium-dark-skin-tone {
-  background-position: -720px -576px;
+	background-position: calc(-10 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-waving-hand-dark-skin-tone {
-  background-position: -720px -648px;
+	background-position: calc(-10 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-raised-hand {
-  background-position: 0 -720px;
+	background-position: 0 calc(-10 * 1.5em);
 }
 .em.em-raised-hand-light-skin-tone {
-  background-position: -72px -720px;
+	background-position: calc(-1 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-raised-hand-medium-light-skin-tone {
-  background-position: -144px -720px;
+	background-position: calc(-2 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-raised-hand-medium-skin-tone {
-  background-position: -216px -720px;
+	background-position: calc(-3 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-raised-hand-medium-dark-skin-tone {
-  background-position: -288px -720px;
+	background-position: calc(-4 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-raised-hand-dark-skin-tone {
-  background-position: -360px -720px;
+	background-position: calc(-5 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-ok-hand {
-  background-position: -432px -720px;
+	background-position: calc(-6 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-ok-hand-light-skin-tone {
-  background-position: -504px -720px;
+	background-position: calc(-7 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-ok-hand-medium-light-skin-tone {
-  background-position: -576px -720px;
+	background-position: calc(-8 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-ok-hand-medium-skin-tone {
-  background-position: -648px -720px;
+	background-position: calc(-9 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-ok-hand-medium-dark-skin-tone {
-  background-position: -720px -720px;
+	background-position: calc(-10 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-ok-hand-dark-skin-tone {
-  background-position: -792px 0;
+	background-position: calc(-11 * 1.5em) 0;
 }
 .em.em-victory-hand {
-  background-position: -792px -72px;
+	background-position: calc(-11 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-victory-hand-light-skin-tone {
-  background-position: -792px -144px;
+	background-position: calc(-11 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-victory-hand-medium-light-skin-tone {
-  background-position: -792px -216px;
+	background-position: calc(-11 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-victory-hand-medium-skin-tone {
-  background-position: -792px -288px;
+	background-position: calc(-11 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-victory-hand-medium-dark-skin-tone {
-  background-position: -792px -360px;
+	background-position: calc(-11 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-victory-hand-dark-skin-tone {
-  background-position: -792px -432px;
+	background-position: calc(-11 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-backhand-index-pointing-left {
-  background-position: -792px -504px;
+	background-position: calc(-11 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-backhand-index-pointing-left-light-skin-tone {
-  background-position: -792px -576px;
+	background-position: calc(-11 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-backhand-index-pointing-left-medium-light-skin-tone {
-  background-position: -792px -648px;
+	background-position: calc(-11 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-backhand-index-pointing-left-medium-skin-tone {
-  background-position: -792px -720px;
+	background-position: calc(-11 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-backhand-index-pointing-left-medium-dark-skin-tone {
-  background-position: 0 -792px;
+	background-position: 0 calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-left-dark-skin-tone {
-  background-position: -72px -792px;
+	background-position: calc(-1 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-right {
-  background-position: -144px -792px;
+	background-position: calc(-2 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-right-light-skin-tone {
-  background-position: -216px -792px;
+	background-position: calc(-3 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-right-medium-light-skin-tone {
-  background-position: -288px -792px;
+	background-position: calc(-4 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-right-medium-skin-tone {
-  background-position: -360px -792px;
+	background-position: calc(-5 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-right-medium-dark-skin-tone {
-  background-position: -432px -792px;
+	background-position: calc(-6 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-right-dark-skin-tone {
-  background-position: -504px -792px;
+	background-position: calc(-7 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-up {
-  background-position: -576px -792px;
+	background-position: calc(-8 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-up-light-skin-tone {
-  background-position: -648px -792px;
+	background-position: calc(-9 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-up-medium-light-skin-tone {
-  background-position: -720px -792px;
+	background-position: calc(-10 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-up-medium-skin-tone {
-  background-position: -792px -792px;
+	background-position: calc(-11 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-backhand-index-pointing-up-medium-dark-skin-tone {
-  background-position: -864px 0;
+	background-position: calc(-12 * 1.5em) 0;
 }
 .em.em-backhand-index-pointing-up-dark-skin-tone {
-  background-position: -864px -72px;
+	background-position: calc(-12 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-backhand-index-pointing-down {
-  background-position: -864px -144px;
+	background-position: calc(-12 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-backhand-index-pointing-down-light-skin-tone {
-  background-position: -864px -216px;
+	background-position: calc(-12 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-backhand-index-pointing-down-medium-light-skin-tone {
-  background-position: -864px -288px;
+	background-position: calc(-12 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-backhand-index-pointing-down-medium-skin-tone {
-  background-position: -864px -360px;
+	background-position: calc(-12 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-backhand-index-pointing-down-medium-dark-skin-tone {
-  background-position: -864px -432px;
+	background-position: calc(-12 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-backhand-index-pointing-down-dark-skin-tone {
-  background-position: -864px -504px;
+	background-position: calc(-12 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-index-pointing-up {
-  background-position: -864px -576px;
+	background-position: calc(-12 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-index-pointing-up-light-skin-tone {
-  background-position: -864px -648px;
+	background-position: calc(-12 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-index-pointing-up-medium-light-skin-tone {
-  background-position: -864px -720px;
+	background-position: calc(-12 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-index-pointing-up-medium-skin-tone {
-  background-position: -864px -792px;
+	background-position: calc(-12 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-index-pointing-up-medium-dark-skin-tone {
-  background-position: 0 -864px;
+	background-position: 0 calc(-12 * 1.5em);
 }
 .em.em-index-pointing-up-dark-skin-tone {
-  background-position: -72px -864px;
+	background-position: calc(-1 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-up {
-  background-position: -144px -864px;
+	background-position: calc(-2 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-up-light-skin-tone {
-  background-position: -216px -864px;
+	background-position: calc(-3 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-up-medium-light-skin-tone {
-  background-position: -288px -864px;
+	background-position: calc(-4 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-up-medium-skin-tone {
-  background-position: -360px -864px;
+	background-position: calc(-5 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-up-medium-dark-skin-tone {
-  background-position: -432px -864px;
+	background-position: calc(-6 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-up-dark-skin-tone {
-  background-position: -504px -864px;
+	background-position: calc(-7 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-down {
-  background-position: -576px -864px;
+	background-position: calc(-8 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-down-light-skin-tone {
-  background-position: -648px -864px;
+	background-position: calc(-9 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-down-medium-light-skin-tone {
-  background-position: -720px -864px;
+	background-position: calc(-10 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-down-medium-skin-tone {
-  background-position: -792px -864px;
+	background-position: calc(-11 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-down-medium-dark-skin-tone {
-  background-position: -864px -864px;
+	background-position: calc(-12 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-thumbs-down-dark-skin-tone {
-  background-position: -936px 0;
+	background-position: calc(-13 * 1.5em) 0;
 }
 .em.em-raised-fist {
-  background-position: -936px -72px;
+	background-position: calc(-13 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-raised-fist-light-skin-tone {
-  background-position: -936px -144px;
+	background-position: calc(-13 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-raised-fist-medium-light-skin-tone {
-  background-position: -936px -216px;
+	background-position: calc(-13 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-raised-fist-medium-skin-tone {
-  background-position: -936px -288px;
+	background-position: calc(-13 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-raised-fist-medium-dark-skin-tone {
-  background-position: -936px -360px;
+	background-position: calc(-13 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-raised-fist-dark-skin-tone {
-  background-position: -936px -432px;
+	background-position: calc(-13 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-oncoming-fist {
-  background-position: -936px -504px;
+	background-position: calc(-13 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-oncoming-fist-light-skin-tone {
-  background-position: -936px -576px;
+	background-position: calc(-13 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-oncoming-fist-medium-light-skin-tone {
-  background-position: -936px -648px;
+	background-position: calc(-13 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-oncoming-fist-medium-skin-tone {
-  background-position: -936px -720px;
+	background-position: calc(-13 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-oncoming-fist-medium-dark-skin-tone {
-  background-position: -936px -792px;
+	background-position: calc(-13 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-oncoming-fist-dark-skin-tone {
-  background-position: -936px -864px;
+	background-position: calc(-13 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-clapping-hands {
-  background-position: 0 -936px;
+	background-position: 0 calc(-13 * 1.5em);
 }
 .em.em-clapping-hands-light-skin-tone {
-  background-position: -72px -936px;
+	background-position: calc(-1 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-clapping-hands-medium-light-skin-tone {
-  background-position: -144px -936px;
+	background-position: calc(-2 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-clapping-hands-medium-skin-tone {
-  background-position: -216px -936px;
+	background-position: calc(-3 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-clapping-hands-medium-dark-skin-tone {
-  background-position: -288px -936px;
+	background-position: calc(-4 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-clapping-hands-dark-skin-tone {
-  background-position: -360px -936px;
+	background-position: calc(-5 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-raising-hands {
-  background-position: -432px -936px;
+	background-position: calc(-6 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-raising-hands-light-skin-tone {
-  background-position: -504px -936px;
+	background-position: calc(-7 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-raising-hands-medium-light-skin-tone {
-  background-position: -576px -936px;
+	background-position: calc(-8 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-raising-hands-medium-skin-tone {
-  background-position: -648px -936px;
+	background-position: calc(-9 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-raising-hands-medium-dark-skin-tone {
-  background-position: -720px -936px;
+	background-position: calc(-10 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-raising-hands-dark-skin-tone {
-  background-position: -792px -936px;
+	background-position: calc(-11 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-open-hands {
-  background-position: -864px -936px;
+	background-position: calc(-12 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-open-hands-light-skin-tone {
-  background-position: -936px -936px;
+	background-position: calc(-13 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-open-hands-medium-light-skin-tone {
-  background-position: -1008px 0;
+	background-position: calc(-14 * 1.5em) 0;
 }
 .em.em-open-hands-medium-skin-tone {
-  background-position: -1008px -72px;
+	background-position: calc(-14 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-open-hands-medium-dark-skin-tone {
-  background-position: -1008px -144px;
+	background-position: calc(-14 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-open-hands-dark-skin-tone {
-  background-position: -1008px -216px;
+	background-position: calc(-14 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-folded-hands {
-  background-position: -1008px -288px;
+	background-position: calc(-14 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-folded-hands-light-skin-tone {
-  background-position: -1008px -360px;
+	background-position: calc(-14 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-folded-hands-medium-light-skin-tone {
-  background-position: -1008px -432px;
+	background-position: calc(-14 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-folded-hands-medium-skin-tone {
-  background-position: -1008px -504px;
+	background-position: calc(-14 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-folded-hands-medium-dark-skin-tone {
-  background-position: -1008px -576px;
+	background-position: calc(-14 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-folded-hands-dark-skin-tone {
-  background-position: -1008px -648px;
+	background-position: calc(-14 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-nail-polish {
-  background-position: -1008px -720px;
+	background-position: calc(-14 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-nail-polish-light-skin-tone {
-  background-position: -1008px -792px;
+	background-position: calc(-14 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-nail-polish-medium-light-skin-tone {
-  background-position: -1008px -864px;
+	background-position: calc(-14 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-nail-polish-medium-skin-tone {
-  background-position: -1008px -936px;
+	background-position: calc(-14 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-nail-polish-medium-dark-skin-tone {
-  background-position: 0 -1008px;
+	background-position: 0 calc(-14 * 1.5em);
 }
 .em.em-nail-polish-dark-skin-tone {
-  background-position: -72px -1008px;
+	background-position: calc(-1 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-flexed-biceps {
-  background-position: -144px -1008px;
+	background-position: calc(-2 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-flexed-biceps-light-skin-tone {
-  background-position: -216px -1008px;
+	background-position: calc(-3 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-flexed-biceps-medium-light-skin-tone {
-  background-position: -288px -1008px;
+	background-position: calc(-4 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-flexed-biceps-medium-skin-tone {
-  background-position: -360px -1008px;
+	background-position: calc(-5 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-flexed-biceps-medium-dark-skin-tone {
-  background-position: -432px -1008px;
+	background-position: calc(-6 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-flexed-biceps-dark-skin-tone {
-  background-position: -504px -1008px;
+	background-position: calc(-7 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-ear {
-  background-position: -576px -1008px;
+	background-position: calc(-8 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-ear-light-skin-tone {
-  background-position: -648px -1008px;
+	background-position: calc(-9 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-ear-medium-light-skin-tone {
-  background-position: -720px -1008px;
+	background-position: calc(-10 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-ear-medium-skin-tone {
-  background-position: -792px -1008px;
+	background-position: calc(-11 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-ear-medium-dark-skin-tone {
-  background-position: -864px -1008px;
+	background-position: calc(-12 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-ear-dark-skin-tone {
-  background-position: -936px -1008px;
+	background-position: calc(-13 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-nose {
-  background-position: -1008px -1008px;
+	background-position: calc(-14 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-nose-light-skin-tone {
-  background-position: -1080px 0;
+	background-position: calc(-15 * 1.5em) 0;
 }
 .em.em-nose-medium-light-skin-tone {
-  background-position: -1080px -72px;
+	background-position: calc(-15 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-nose-medium-skin-tone {
-  background-position: -1080px -144px;
+	background-position: calc(-15 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-nose-medium-dark-skin-tone {
-  background-position: -1080px -216px;
+	background-position: calc(-15 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-nose-dark-skin-tone {
-  background-position: -1080px -288px;
+	background-position: calc(-15 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-eyes {
-  background-position: -1080px -360px;
+	background-position: calc(-15 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-tongue {
-  background-position: -1080px -432px;
+	background-position: calc(-15 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-mouth {
-  background-position: -1080px -504px;
+	background-position: calc(-15 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-baby {
-  background-position: -1080px -576px;
+	background-position: calc(-15 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-baby-light-skin-tone {
-  background-position: -1080px -648px;
+	background-position: calc(-15 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-baby-medium-light-skin-tone {
-  background-position: -1080px -720px;
+	background-position: calc(-15 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-baby-medium-skin-tone {
-  background-position: -1080px -792px;
+	background-position: calc(-15 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-baby-medium-dark-skin-tone {
-  background-position: -1080px -864px;
+	background-position: calc(-15 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-baby-dark-skin-tone {
-  background-position: -1080px -936px;
+	background-position: calc(-15 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-boy {
-  background-position: -1080px -1008px;
+	background-position: calc(-15 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-boy-light-skin-tone {
-  background-position: 0 -1080px;
+	background-position: 0 calc(-15 * 1.5em);
 }
 .em.em-boy-medium-light-skin-tone {
-  background-position: -72px -1080px;
+	background-position: calc(-1 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-boy-medium-skin-tone {
-  background-position: -144px -1080px;
+	background-position: calc(-2 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-boy-medium-dark-skin-tone {
-  background-position: -216px -1080px;
+	background-position: calc(-3 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-boy-dark-skin-tone {
-  background-position: -288px -1080px;
+	background-position: calc(-4 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-girl {
-  background-position: -360px -1080px;
+	background-position: calc(-5 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-girl-light-skin-tone {
-  background-position: -432px -1080px;
+	background-position: calc(-6 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-girl-medium-light-skin-tone {
-  background-position: -504px -1080px;
+	background-position: calc(-7 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-girl-medium-skin-tone {
-  background-position: -576px -1080px;
+	background-position: calc(-8 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-girl-medium-dark-skin-tone {
-  background-position: -648px -1080px;
+	background-position: calc(-9 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-girl-dark-skin-tone {
-  background-position: -720px -1080px;
+	background-position: calc(-10 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-blond-hair {
-  background-position: -792px -1080px;
+	background-position: calc(-11 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-light-skin-tone-blond-hair {
-  background-position: -864px -1080px;
+	background-position: calc(-12 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-medium-light-skin-tone-blond-hair {
-  background-position: -936px -1080px;
+	background-position: calc(-13 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-medium-skin-tone-blond-hair {
-  background-position: -1008px -1080px;
+	background-position: calc(-14 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-medium-dark-skin-tone-blond-hair {
-  background-position: -1080px -1080px;
+	background-position: calc(-15 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-dark-skin-tone-blond-hair {
-  background-position: -1152px 0;
+	background-position: calc(-16 * 1.5em) 0;
 }
 .em.em-man {
-  background-position: -1152px -72px;
+	background-position: calc(-16 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-man-light-skin-tone {
-  background-position: -1152px -144px;
+	background-position: calc(-16 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-man-medium-light-skin-tone {
-  background-position: -1152px -216px;
+	background-position: calc(-16 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-man-medium-skin-tone {
-  background-position: -1152px -288px;
+	background-position: calc(-16 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-man-medium-dark-skin-tone {
-  background-position: -1152px -360px;
+	background-position: calc(-16 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-man-dark-skin-tone {
-  background-position: -1152px -432px;
+	background-position: calc(-16 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-woman {
-  background-position: -1152px -504px;
+	background-position: calc(-16 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-woman-light-skin-tone {
-  background-position: -1152px -576px;
+	background-position: calc(-16 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-woman-medium-light-skin-tone {
-  background-position: -1152px -648px;
+	background-position: calc(-16 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-woman-medium-skin-tone {
-  background-position: -1152px -720px;
+	background-position: calc(-16 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-woman-medium-dark-skin-tone {
-  background-position: -1152px -792px;
+	background-position: calc(-16 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-woman-dark-skin-tone {
-  background-position: -1152px -864px;
+	background-position: calc(-16 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-old-man {
-  background-position: -1152px -936px;
+	background-position: calc(-16 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-old-man-light-skin-tone {
-  background-position: -1152px -1008px;
+	background-position: calc(-16 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-old-man-medium-light-skin-tone {
-  background-position: -1152px -1080px;
+	background-position: calc(-16 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-old-man-medium-skin-tone {
-  background-position: 0 -1152px;
+	background-position: 0 calc(-16 * 1.5em);
 }
 .em.em-old-man-medium-dark-skin-tone {
-  background-position: -72px -1152px;
+	background-position: calc(-1 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-old-man-dark-skin-tone {
-  background-position: -144px -1152px;
+	background-position: calc(-2 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-old-woman {
-  background-position: -216px -1152px;
+	background-position: calc(-3 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-old-woman-light-skin-tone {
-  background-position: -288px -1152px;
+	background-position: calc(-4 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-old-woman-medium-light-skin-tone {
-  background-position: -360px -1152px;
+	background-position: calc(-5 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-old-woman-medium-skin-tone {
-  background-position: -432px -1152px;
+	background-position: calc(-6 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-old-woman-medium-dark-skin-tone {
-  background-position: -504px -1152px;
+	background-position: calc(-7 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-old-woman-dark-skin-tone {
-  background-position: -576px -1152px;
+	background-position: calc(-8 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-frowning {
-  background-position: -648px -1152px;
+	background-position: calc(-9 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-frowning-light-skin-tone {
-  background-position: -720px -1152px;
+	background-position: calc(-10 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-frowning-medium-light-skin-tone {
-  background-position: -792px -1152px;
+	background-position: calc(-11 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-frowning-medium-skin-tone {
-  background-position: -864px -1152px;
+	background-position: calc(-12 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-frowning-medium-dark-skin-tone {
-  background-position: -936px -1152px;
+	background-position: calc(-13 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-frowning-dark-skin-tone {
-  background-position: -1008px -1152px;
+	background-position: calc(-14 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-pouting {
-  background-position: -1080px -1152px;
+	background-position: calc(-15 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-pouting-light-skin-tone {
-  background-position: -1152px -1152px;
+	background-position: calc(-16 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-pouting-medium-light-skin-tone {
-  background-position: -1224px 0;
+	background-position: calc(-17 * 1.5em) 0;
 }
 .em.em-person-pouting-medium-skin-tone {
-  background-position: -1224px -72px;
+	background-position: calc(-17 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-person-pouting-medium-dark-skin-tone {
-  background-position: -1224px -144px;
+	background-position: calc(-17 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-person-pouting-dark-skin-tone {
-  background-position: -1224px -216px;
+	background-position: calc(-17 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-person-gesturing-no {
-  background-position: -1224px -288px;
+	background-position: calc(-17 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-person-gesturing-no-light-skin-tone {
-  background-position: -1224px -360px;
+	background-position: calc(-17 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-person-gesturing-no-medium-light-skin-tone {
-  background-position: -1224px -432px;
+	background-position: calc(-17 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-person-gesturing-no-medium-skin-tone {
-  background-position: -1224px -504px;
+	background-position: calc(-17 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-person-gesturing-no-medium-dark-skin-tone {
-  background-position: -1224px -576px;
+	background-position: calc(-17 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-person-gesturing-no-dark-skin-tone {
-  background-position: -1224px -648px;
+	background-position: calc(-17 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-person-gesturing-ok {
-  background-position: -1224px -720px;
+	background-position: calc(-17 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-person-gesturing-ok-light-skin-tone {
-  background-position: -1224px -792px;
+	background-position: calc(-17 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-person-gesturing-ok-medium-light-skin-tone {
-  background-position: -1224px -864px;
+	background-position: calc(-17 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-person-gesturing-ok-medium-skin-tone {
-  background-position: -1224px -936px;
+	background-position: calc(-17 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-person-gesturing-ok-medium-dark-skin-tone {
-  background-position: -1224px -1008px;
+	background-position: calc(-17 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-person-gesturing-ok-dark-skin-tone {
-  background-position: -1224px -1080px;
+	background-position: calc(-17 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-tipping-hand {
-  background-position: -1224px -1152px;
+	background-position: calc(-17 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-tipping-hand-light-skin-tone {
-  background-position: 0 -1224px;
+	background-position: 0 calc(-17 * 1.5em);
 }
 .em.em-person-tipping-hand-medium-light-skin-tone {
-  background-position: -72px -1224px;
+	background-position: calc(-1 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-tipping-hand-medium-skin-tone {
-  background-position: -144px -1224px;
+	background-position: calc(-2 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-tipping-hand-medium-dark-skin-tone {
-  background-position: -216px -1224px;
+	background-position: calc(-3 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-tipping-hand-dark-skin-tone {
-  background-position: -288px -1224px;
+	background-position: calc(-4 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-raising-hand {
-  background-position: -360px -1224px;
+	background-position: calc(-5 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-raising-hand-light-skin-tone {
-  background-position: -432px -1224px;
+	background-position: calc(-6 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-raising-hand-medium-light-skin-tone {
-  background-position: -504px -1224px;
+	background-position: calc(-7 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-raising-hand-medium-skin-tone {
-  background-position: -576px -1224px;
+	background-position: calc(-8 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-raising-hand-medium-dark-skin-tone {
-  background-position: -648px -1224px;
+	background-position: calc(-9 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-raising-hand-dark-skin-tone {
-  background-position: -720px -1224px;
+	background-position: calc(-10 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-bowing {
-  background-position: -792px -1224px;
+	background-position: calc(-11 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-bowing-light-skin-tone {
-  background-position: -864px -1224px;
+	background-position: calc(-12 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-bowing-medium-light-skin-tone {
-  background-position: -936px -1224px;
+	background-position: calc(-13 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-bowing-medium-skin-tone {
-  background-position: -1008px -1224px;
+	background-position: calc(-14 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-bowing-medium-dark-skin-tone {
-  background-position: -1080px -1224px;
+	background-position: calc(-15 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-bowing-dark-skin-tone {
-  background-position: -1152px -1224px;
+	background-position: calc(-16 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-police-officer {
-  background-position: -1224px -1224px;
+	background-position: calc(-17 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-police-officer-light-skin-tone {
-  background-position: -1296px 0;
+	background-position: calc(-18 * 1.5em) 0;
 }
 .em.em-police-officer-medium-light-skin-tone {
-  background-position: -1296px -72px;
+	background-position: calc(-18 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-police-officer-medium-skin-tone {
-  background-position: -1296px -144px;
+	background-position: calc(-18 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-police-officer-medium-dark-skin-tone {
-  background-position: -1296px -216px;
+	background-position: calc(-18 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-police-officer-dark-skin-tone {
-  background-position: -1296px -288px;
+	background-position: calc(-18 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-guard {
-  background-position: -1296px -360px;
+	background-position: calc(-18 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-guard-light-skin-tone {
-  background-position: -1296px -432px;
+	background-position: calc(-18 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-guard-medium-light-skin-tone {
-  background-position: -1296px -504px;
+	background-position: calc(-18 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-guard-medium-skin-tone {
-  background-position: -1296px -576px;
+	background-position: calc(-18 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-guard-medium-dark-skin-tone {
-  background-position: -1296px -648px;
+	background-position: calc(-18 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-guard-dark-skin-tone {
-  background-position: -1296px -720px;
+	background-position: calc(-18 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-construction-worker {
-  background-position: -1296px -792px;
+	background-position: calc(-18 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-construction-worker-light-skin-tone {
-  background-position: -1296px -864px;
+	background-position: calc(-18 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-construction-worker-medium-light-skin-tone {
-  background-position: -1296px -936px;
+	background-position: calc(-18 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-construction-worker-medium-skin-tone {
-  background-position: -1296px -1008px;
+	background-position: calc(-18 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-construction-worker-medium-dark-skin-tone {
-  background-position: -1296px -1080px;
+	background-position: calc(-18 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-construction-worker-dark-skin-tone {
-  background-position: -1296px -1152px;
+	background-position: calc(-18 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-princess {
-  background-position: -1296px -1224px;
+	background-position: calc(-18 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-princess-light-skin-tone {
-  background-position: 0 -1296px;
+	background-position: 0 calc(-18 * 1.5em);
 }
 .em.em-princess-medium-light-skin-tone {
-  background-position: -72px -1296px;
+	background-position: calc(-1 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-princess-medium-skin-tone {
-  background-position: -144px -1296px;
+	background-position: calc(-2 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-princess-medium-dark-skin-tone {
-  background-position: -216px -1296px;
+	background-position: calc(-3 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-princess-dark-skin-tone {
-  background-position: -288px -1296px;
+	background-position: calc(-4 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-wearing-turban {
-  background-position: -360px -1296px;
+	background-position: calc(-5 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-wearing-turban-light-skin-tone {
-  background-position: -432px -1296px;
+	background-position: calc(-6 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-wearing-turban-medium-light-skin-tone {
-  background-position: -504px -1296px;
+	background-position: calc(-7 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-wearing-turban-medium-skin-tone {
-  background-position: -576px -1296px;
+	background-position: calc(-8 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-wearing-turban-medium-dark-skin-tone {
-  background-position: -648px -1296px;
+	background-position: calc(-9 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-wearing-turban-dark-skin-tone {
-  background-position: -720px -1296px;
+	background-position: calc(-10 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-skullcap {
-  background-position: -792px -1296px;
+	background-position: calc(-11 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-skullcap-light-skin-tone {
-  background-position: -864px -1296px;
+	background-position: calc(-12 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-skullcap-medium-light-skin-tone {
-  background-position: -936px -1296px;
+	background-position: calc(-13 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-skullcap-medium-skin-tone {
-  background-position: -1008px -1296px;
+	background-position: calc(-14 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-skullcap-medium-dark-skin-tone {
-  background-position: -1080px -1296px;
+	background-position: calc(-15 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-skullcap-dark-skin-tone {
-  background-position: -1152px -1296px;
+	background-position: calc(-16 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-veil {
-  background-position: -1224px -1296px;
+	background-position: calc(-17 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-veil-light-skin-tone {
-  background-position: -1296px -1296px;
+	background-position: calc(-18 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-with-veil-medium-light-skin-tone {
-  background-position: -1368px 0;
+	background-position: calc(-19 * 1.5em) 0;
 }
 .em.em-person-with-veil-medium-skin-tone {
-  background-position: -1368px -72px;
+	background-position: calc(-19 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-person-with-veil-medium-dark-skin-tone {
-  background-position: -1368px -144px;
+	background-position: calc(-19 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-person-with-veil-dark-skin-tone {
-  background-position: -1368px -216px;
+	background-position: calc(-19 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-baby-angel {
-  background-position: -1368px -288px;
+	background-position: calc(-19 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-baby-angel-light-skin-tone {
-  background-position: -1368px -360px;
+	background-position: calc(-19 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-baby-angel-medium-light-skin-tone {
-  background-position: -1368px -432px;
+	background-position: calc(-19 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-baby-angel-medium-skin-tone {
-  background-position: -1368px -504px;
+	background-position: calc(-19 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-baby-angel-medium-dark-skin-tone {
-  background-position: -1368px -576px;
+	background-position: calc(-19 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-baby-angel-dark-skin-tone {
-  background-position: -1368px -648px;
+	background-position: calc(-19 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-santa-claus {
-  background-position: -1368px -720px;
+	background-position: calc(-19 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-santa-claus-light-skin-tone {
-  background-position: -1368px -792px;
+	background-position: calc(-19 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-santa-claus-medium-light-skin-tone {
-  background-position: -1368px -864px;
+	background-position: calc(-19 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-santa-claus-medium-skin-tone {
-  background-position: -1368px -936px;
+	background-position: calc(-19 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-santa-claus-medium-dark-skin-tone {
-  background-position: -1368px -1008px;
+	background-position: calc(-19 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-santa-claus-dark-skin-tone {
-  background-position: -1368px -1080px;
+	background-position: calc(-19 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-person-getting-massage {
-  background-position: -1368px -1152px;
+	background-position: calc(-19 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-person-getting-massage-light-skin-tone {
-  background-position: -1368px -1224px;
+	background-position: calc(-19 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-person-getting-massage-medium-light-skin-tone {
-  background-position: -1368px -1296px;
+	background-position: calc(-19 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-person-getting-massage-medium-skin-tone {
-  background-position: 0 -1368px;
+	background-position: 0 calc(-19 * 1.5em);
 }
 .em.em-person-getting-massage-medium-dark-skin-tone {
-  background-position: -72px -1368px;
+	background-position: calc(-1 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-getting-massage-dark-skin-tone {
-  background-position: -144px -1368px;
+	background-position: calc(-2 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-getting-haircut {
-  background-position: -216px -1368px;
+	background-position: calc(-3 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-getting-haircut-light-skin-tone {
-  background-position: -288px -1368px;
+	background-position: calc(-4 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-getting-haircut-medium-light-skin-tone {
-  background-position: -360px -1368px;
+	background-position: calc(-5 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-getting-haircut-medium-skin-tone {
-  background-position: -432px -1368px;
+	background-position: calc(-6 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-getting-haircut-medium-dark-skin-tone {
-  background-position: -504px -1368px;
+	background-position: calc(-7 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-getting-haircut-dark-skin-tone {
-  background-position: -576px -1368px;
+	background-position: calc(-8 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-walking {
-  background-position: -648px -1368px;
+	background-position: calc(-9 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-walking-light-skin-tone {
-  background-position: -720px -1368px;
+	background-position: calc(-10 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-walking-medium-light-skin-tone {
-  background-position: -792px -1368px;
+	background-position: calc(-11 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-walking-medium-skin-tone {
-  background-position: -864px -1368px;
+	background-position: calc(-12 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-walking-medium-dark-skin-tone {
-  background-position: -936px -1368px;
+	background-position: calc(-13 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-walking-dark-skin-tone {
-  background-position: -1008px -1368px;
+	background-position: calc(-14 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-running {
-  background-position: -1080px -1368px;
+	background-position: calc(-15 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-running-light-skin-tone {
-  background-position: -1152px -1368px;
+	background-position: calc(-16 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-running-medium-light-skin-tone {
-  background-position: -1224px -1368px;
+	background-position: calc(-17 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-running-medium-skin-tone {
-  background-position: -1296px -1368px;
+	background-position: calc(-18 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-running-medium-dark-skin-tone {
-  background-position: -1368px -1368px;
+	background-position: calc(-19 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-running-dark-skin-tone {
-  background-position: -1440px 0;
+	background-position: calc(-20 * 1.5em) 0;
 }
 .em.em-woman-dancing {
-  background-position: -1440px -72px;
+	background-position: calc(-20 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-woman-dancing-light-skin-tone {
-  background-position: -1440px -144px;
+	background-position: calc(-20 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-woman-dancing-medium-light-skin-tone {
-  background-position: -1440px -216px;
+	background-position: calc(-20 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-woman-dancing-medium-skin-tone {
-  background-position: -1440px -288px;
+	background-position: calc(-20 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-woman-dancing-medium-dark-skin-tone {
-  background-position: -1440px -360px;
+	background-position: calc(-20 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-woman-dancing-dark-skin-tone {
-  background-position: -1440px -432px;
+	background-position: calc(-20 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-people-with-bunny-ears {
-  background-position: -1440px -504px;
+	background-position: calc(-20 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-horse-racing {
-  background-position: -1440px -576px;
+	background-position: calc(-20 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-horse-racing-light-skin-tone {
-  background-position: -1440px -648px;
+	background-position: calc(-20 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-horse-racing-medium-light-skin-tone {
-  background-position: -1440px -720px;
+	background-position: calc(-20 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-horse-racing-medium-skin-tone {
-  background-position: -1440px -792px;
+	background-position: calc(-20 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-horse-racing-medium-dark-skin-tone {
-  background-position: -1440px -864px;
+	background-position: calc(-20 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-horse-racing-dark-skin-tone {
-  background-position: -1440px -936px;
+	background-position: calc(-20 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-snowboarder {
-  background-position: -1440px -1008px;
+	background-position: calc(-20 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-snowboarder-light-skin-tone {
-  background-position: -1440px -1080px;
+	background-position: calc(-20 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-snowboarder-medium-light-skin-tone {
-  background-position: -1440px -1152px;
+	background-position: calc(-20 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-snowboarder-medium-skin-tone {
-  background-position: -1440px -1224px;
+	background-position: calc(-20 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-snowboarder-medium-dark-skin-tone {
-  background-position: -1440px -1296px;
+	background-position: calc(-20 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-snowboarder-dark-skin-tone {
-  background-position: -1440px -1368px;
+	background-position: calc(-20 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-person-surfing {
-  background-position: 0 -1440px;
+	background-position: 0 calc(-20 * 1.5em);
 }
 .em.em-person-surfing-light-skin-tone {
-  background-position: -72px -1440px;
+	background-position: calc(-1 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-surfing-medium-light-skin-tone {
-  background-position: -144px -1440px;
+	background-position: calc(-2 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-surfing-medium-skin-tone {
-  background-position: -216px -1440px;
+	background-position: calc(-3 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-surfing-medium-dark-skin-tone {
-  background-position: -288px -1440px;
+	background-position: calc(-4 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-surfing-dark-skin-tone {
-  background-position: -360px -1440px;
+	background-position: calc(-5 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-rowing-boat {
-  background-position: -432px -1440px;
+	background-position: calc(-6 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-swimming {
-  background-position: -504px -1440px;
+	background-position: calc(-7 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-swimming-light-skin-tone {
-  background-position: -576px -1440px;
+	background-position: calc(-8 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-swimming-medium-light-skin-tone {
-  background-position: -648px -1440px;
+	background-position: calc(-9 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-swimming-medium-skin-tone {
-  background-position: -720px -1440px;
+	background-position: calc(-10 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-swimming-medium-dark-skin-tone {
-  background-position: -792px -1440px;
+	background-position: calc(-11 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-swimming-dark-skin-tone {
-  background-position: -864px -1440px;
+	background-position: calc(-12 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-biking {
-  background-position: -936px -1440px;
+	background-position: calc(-13 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-biking-light-skin-tone {
-  background-position: -1008px -1440px;
+	background-position: calc(-14 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-biking-medium-light-skin-tone {
-  background-position: -1080px -1440px;
+	background-position: calc(-15 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-biking-medium-skin-tone {
-  background-position: -1152px -1440px;
+	background-position: calc(-16 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-biking-medium-dark-skin-tone {
-  background-position: -1224px -1440px;
+	background-position: calc(-17 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-biking-dark-skin-tone {
-  background-position: -1296px -1440px;
+	background-position: calc(-18 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-mountain-biking {
-  background-position: -1368px -1440px;
+	background-position: calc(-19 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-mountain-biking-light-skin-tone {
-  background-position: -1440px -1440px;
+	background-position: calc(-20 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-person-mountain-biking-medium-light-skin-tone {
-  background-position: -1512px 0;
+	background-position: calc(-21 * 1.5em) 0;
 }
 .em.em-person-mountain-biking-medium-skin-tone {
-  background-position: -1512px -72px;
+	background-position: calc(-21 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-person-mountain-biking-medium-dark-skin-tone {
-  background-position: -1512px -144px;
+	background-position: calc(-21 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-person-mountain-biking-dark-skin-tone {
-  background-position: -1512px -216px;
+	background-position: calc(-21 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-person-taking-bath {
-  background-position: -1512px -288px;
+	background-position: calc(-21 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-person-taking-bath-light-skin-tone {
-  background-position: -1512px -360px;
+	background-position: calc(-21 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-person-taking-bath-medium-light-skin-tone {
-  background-position: -1512px -432px;
+	background-position: calc(-21 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-person-taking-bath-medium-skin-tone {
-  background-position: -1512px -504px;
+	background-position: calc(-21 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-person-taking-bath-medium-dark-skin-tone {
-  background-position: -1512px -576px;
+	background-position: calc(-21 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-person-taking-bath-dark-skin-tone {
-  background-position: -1512px -648px;
+	background-position: calc(-21 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-women-holding-hands {
-  background-position: -1512px -720px;
+	background-position: calc(-21 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-woman-and-man-holding-hands {
-  background-position: -1512px -792px;
+	background-position: calc(-21 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-men-holding-hands {
-  background-position: -1512px -864px;
+	background-position: calc(-21 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-kiss {
-  background-position: -1512px -936px;
+	background-position: calc(-21 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-kiss-man-man {
-  background-position: -1512px -1008px;
+	background-position: calc(-21 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-kiss-woman-woman {
-  background-position: -1512px -1080px;
+	background-position: calc(-21 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-couple-with-heart {
-  background-position: -1512px -1152px;
+	background-position: calc(-21 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-couple-with-heart-man-man {
-  background-position: -1512px -1224px;
+	background-position: calc(-21 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-couple-with-heart-woman-woman {
-  background-position: -1512px -1296px;
+	background-position: calc(-21 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-family {
-  background-position: -1512px -1368px;
+	background-position: calc(-21 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-family-man-woman-girl {
-  background-position: -1512px -1440px;
+	background-position: calc(-21 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-family-man-woman-girl-boy {
-  background-position: 0 -1512px;
+	background-position: 0 calc(-21 * 1.5em);
 }
 .em.em-family-man-woman-boy-boy {
-  background-position: -72px -1512px;
+	background-position: calc(-1 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-man-woman-girl-girl {
-  background-position: -144px -1512px;
+	background-position: calc(-2 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-man-man-boy {
-  background-position: -216px -1512px;
+	background-position: calc(-3 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-man-man-girl {
-  background-position: -288px -1512px;
+	background-position: calc(-4 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-man-man-girl-boy {
-  background-position: -360px -1512px;
+	background-position: calc(-5 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-man-man-boy-boy {
-  background-position: -432px -1512px;
+	background-position: calc(-6 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-man-man-girl-girl {
-  background-position: -504px -1512px;
+	background-position: calc(-7 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-woman-woman-boy {
-  background-position: -576px -1512px;
+	background-position: calc(-8 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-woman-woman-girl {
-  background-position: -648px -1512px;
+	background-position: calc(-9 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-woman-woman-girl-boy {
-  background-position: -720px -1512px;
+	background-position: calc(-10 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-woman-woman-boy-boy {
-  background-position: -792px -1512px;
+	background-position: calc(-11 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-family-woman-woman-girl-girl {
-  background-position: -864px -1512px;
+	background-position: calc(-12 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-bust-in-silhouette {
-  background-position: -936px -1512px;
+	background-position: calc(-13 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-busts-in-silhouette {
-  background-position: -1008px -1512px;
+	background-position: calc(-14 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-footprints {
-  background-position: -1080px -1512px;
+	background-position: calc(-15 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-monkey-face {
-  background-position: -1152px -1512px;
+	background-position: calc(-16 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-monkey {
-  background-position: -1224px -1512px;
+	background-position: calc(-17 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-dog-face {
-  background-position: -1296px -1512px;
+	background-position: calc(-18 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-dog {
-  background-position: -1368px -1512px;
+	background-position: calc(-19 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-poodle {
-  background-position: -1440px -1512px;
+	background-position: calc(-20 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-wolf {
-  background-position: -1512px -1512px;
+	background-position: calc(-21 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-cat-face {
-  background-position: -1584px 0;
+	background-position: calc(-22 * 1.5em) 0;
 }
 .em.em-cat {
-  background-position: -1584px -72px;
+	background-position: calc(-22 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-tiger-face {
-  background-position: -1584px -144px;
+	background-position: calc(-22 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-tiger {
-  background-position: -1584px -216px;
+	background-position: calc(-22 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-leopard {
-  background-position: -1584px -288px;
+	background-position: calc(-22 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-horse-face {
-  background-position: -1584px -360px;
+	background-position: calc(-22 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-horse {
-  background-position: -1584px -432px;
+	background-position: calc(-22 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-cow-face {
-  background-position: -1584px -504px;
+	background-position: calc(-22 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-ox {
-  background-position: -1584px -576px;
+	background-position: calc(-22 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-water-buffalo {
-  background-position: -1584px -648px;
+	background-position: calc(-22 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-cow {
-  background-position: -1584px -720px;
+	background-position: calc(-22 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-pig-face {
-  background-position: -1584px -792px;
+	background-position: calc(-22 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-pig {
-  background-position: -1584px -864px;
+	background-position: calc(-22 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-boar {
-  background-position: -1584px -936px;
+	background-position: calc(-22 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-pig-nose {
-  background-position: -1584px -1008px;
+	background-position: calc(-22 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-ram {
-  background-position: -1584px -1080px;
+	background-position: calc(-22 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-ewe {
-  background-position: -1584px -1152px;
+	background-position: calc(-22 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-goat {
-  background-position: -1584px -1224px;
+	background-position: calc(-22 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-camel {
-  background-position: -1584px -1296px;
+	background-position: calc(-22 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-two-hump-camel {
-  background-position: -1584px -1368px;
+	background-position: calc(-22 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-elephant {
-  background-position: -1584px -1440px;
+	background-position: calc(-22 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-mouse-face {
-  background-position: -1584px -1512px;
+	background-position: calc(-22 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-mouse {
-  background-position: 0 -1584px;
+	background-position: 0 calc(-22 * 1.5em);
 }
 .em.em-rat {
-  background-position: -72px -1584px;
+	background-position: calc(-1 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-hamster {
-  background-position: -144px -1584px;
+	background-position: calc(-2 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-rabbit-face {
-  background-position: -216px -1584px;
+	background-position: calc(-3 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-rabbit {
-  background-position: -288px -1584px;
+	background-position: calc(-4 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-bear {
-  background-position: -360px -1584px;
+	background-position: calc(-5 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-koala {
-  background-position: -432px -1584px;
+	background-position: calc(-6 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-panda {
-  background-position: -504px -1584px;
+	background-position: calc(-7 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-paw-prints {
-  background-position: -576px -1584px;
+	background-position: calc(-8 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-chicken {
-  background-position: -648px -1584px;
+	background-position: calc(-9 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-rooster {
-  background-position: -720px -1584px;
+	background-position: calc(-10 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-hatching-chick {
-  background-position: -792px -1584px;
+	background-position: calc(-11 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-baby-chick {
-  background-position: -864px -1584px;
+	background-position: calc(-12 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-front-facing-baby-chick {
-  background-position: -936px -1584px;
+	background-position: calc(-13 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-bird {
-  background-position: -1008px -1584px;
+	background-position: calc(-14 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-penguin {
-  background-position: -1080px -1584px;
+	background-position: calc(-15 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-frog {
-  background-position: -1152px -1584px;
+	background-position: calc(-16 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-crocodile {
-  background-position: -1224px -1584px;
+	background-position: calc(-17 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-turtle {
-  background-position: -1296px -1584px;
+	background-position: calc(-18 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-snake {
-  background-position: -1368px -1584px;
+	background-position: calc(-19 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-dragon-face {
-  background-position: -1440px -1584px;
+	background-position: calc(-20 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-dragon {
-  background-position: -1512px -1584px;
+	background-position: calc(-21 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-spouting-whale {
-  background-position: -1584px -1584px;
+	background-position: calc(-22 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-whale {
-  background-position: -1656px 0;
+	background-position: calc(-23 * 1.5em) 0;
 }
 .em.em-dolphin {
-  background-position: -1656px -72px;
+	background-position: calc(-23 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-fish {
-  background-position: -1656px -144px;
+	background-position: calc(-23 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-tropical-fish {
-  background-position: -1656px -216px;
+	background-position: calc(-23 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-blowfish {
-  background-position: -1656px -288px;
+	background-position: calc(-23 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-octopus {
-  background-position: -1656px -360px;
+	background-position: calc(-23 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-spiral-shell {
-  background-position: -1656px -432px;
+	background-position: calc(-23 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-snail {
-  background-position: -1656px -504px;
+	background-position: calc(-23 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-bug {
-  background-position: -1656px -576px;
+	background-position: calc(-23 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-ant {
-  background-position: -1656px -648px;
+	background-position: calc(-23 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-honeybee {
-  background-position: -1656px -720px;
+	background-position: calc(-23 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-lady-beetle {
-  background-position: -1656px -792px;
+	background-position: calc(-23 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-bouquet {
-  background-position: -1656px -864px;
+	background-position: calc(-23 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-cherry-blossom {
-  background-position: -1656px -936px;
+	background-position: calc(-23 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-white-flower {
-  background-position: -1656px -1008px;
+	background-position: calc(-23 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-rose {
-  background-position: -1656px -1080px;
+	background-position: calc(-23 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-hibiscus {
-  background-position: -1656px -1152px;
+	background-position: calc(-23 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-sunflower {
-  background-position: -1656px -1224px;
+	background-position: calc(-23 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-blossom {
-  background-position: -1656px -1296px;
+	background-position: calc(-23 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-tulip {
-  background-position: -1656px -1368px;
+	background-position: calc(-23 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-seedling {
-  background-position: -1656px -1440px;
+	background-position: calc(-23 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-evergreen-tree {
-  background-position: -1656px -1512px;
+	background-position: calc(-23 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-deciduous-tree {
-  background-position: -1656px -1584px;
+	background-position: calc(-23 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-palm-tree {
-  background-position: 0 -1656px;
+	background-position: 0 calc(-23 * 1.5em);
 }
 .em.em-cactus {
-  background-position: -72px -1656px;
+	background-position: calc(-1 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-sheaf-of-rice {
-  background-position: -144px -1656px;
+	background-position: calc(-2 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-herb {
-  background-position: -216px -1656px;
+	background-position: calc(-3 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-four-leaf-clover {
-  background-position: -288px -1656px;
+	background-position: calc(-4 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-maple-leaf {
-  background-position: -360px -1656px;
+	background-position: calc(-5 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-fallen-leaf {
-  background-position: -432px -1656px;
+	background-position: calc(-6 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-leaf-fluttering-in-wind {
-  background-position: -504px -1656px;
+	background-position: calc(-7 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-grapes {
-  background-position: -576px -1656px;
+	background-position: calc(-8 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-melon {
-  background-position: -648px -1656px;
+	background-position: calc(-9 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-watermelon {
-  background-position: -720px -1656px;
+	background-position: calc(-10 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-tangerine {
-  background-position: -792px -1656px;
+	background-position: calc(-11 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-lemon {
-  background-position: -864px -1656px;
+	background-position: calc(-12 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-banana {
-  background-position: -936px -1656px;
+	background-position: calc(-13 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-pineapple {
-  background-position: -1008px -1656px;
+	background-position: calc(-14 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-red-apple {
-  background-position: -1080px -1656px;
+	background-position: calc(-15 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-green-apple {
-  background-position: -1152px -1656px;
+	background-position: calc(-16 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-pear {
-  background-position: -1224px -1656px;
+	background-position: calc(-17 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-peach {
-  background-position: -1296px -1656px;
+	background-position: calc(-18 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-cherries {
-  background-position: -1368px -1656px;
+	background-position: calc(-19 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-strawberry {
-  background-position: -1440px -1656px;
+	background-position: calc(-20 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-tomato {
-  background-position: -1512px -1656px;
+	background-position: calc(-21 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-eggplant {
-  background-position: -1584px -1656px;
+	background-position: calc(-22 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-ear-of-corn {
-  background-position: -1656px -1656px;
+	background-position: calc(-23 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-mushroom {
-  background-position: -1728px 0;
+	background-position: calc(-24 * 1.5em) 0;
 }
 .em.em-chestnut {
-  background-position: -1728px -72px;
+	background-position: calc(-24 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-bread {
-  background-position: -1728px -144px;
+	background-position: calc(-24 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-meat-on-bone {
-  background-position: -1728px -216px;
+	background-position: calc(-24 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-poultry-leg {
-  background-position: -1728px -288px;
+	background-position: calc(-24 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-hamburger {
-  background-position: -1728px -360px;
+	background-position: calc(-24 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-french-fries {
-  background-position: -1728px -432px;
+	background-position: calc(-24 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-pizza {
-  background-position: -1728px -504px;
+	background-position: calc(-24 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-cooking {
-  background-position: -1728px -576px;
+	background-position: calc(-24 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-pot-of-food {
-  background-position: -1728px -648px;
+	background-position: calc(-24 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-bento-box {
-  background-position: -1728px -720px;
+	background-position: calc(-24 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-rice-cracker {
-  background-position: -1728px -792px;
+	background-position: calc(-24 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-rice-ball {
-  background-position: -1728px -864px;
+	background-position: calc(-24 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-cooked-rice {
-  background-position: -1728px -936px;
+	background-position: calc(-24 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-curry-rice {
-  background-position: -1728px -1008px;
+	background-position: calc(-24 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-steaming-bowl {
-  background-position: -1728px -1080px;
+	background-position: calc(-24 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-spaghetti {
-  background-position: -1728px -1152px;
+	background-position: calc(-24 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-roasted-sweet-potato {
-  background-position: -1728px -1224px;
+	background-position: calc(-24 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-oden {
-  background-position: -1728px -1296px;
+	background-position: calc(-24 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-sushi {
-  background-position: -1728px -1368px;
+	background-position: calc(-24 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-fried-shrimp {
-  background-position: -1728px -1440px;
+	background-position: calc(-24 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-fish-cake-with-swirl {
-  background-position: -1728px -1512px;
+	background-position: calc(-24 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-dango {
-  background-position: -1728px -1584px;
+	background-position: calc(-24 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-soft-ice-cream {
-  background-position: -1728px -1656px;
+	background-position: calc(-24 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-shaved-ice {
-  background-position: 0 -1728px;
+	background-position: 0 calc(-24 * 1.5em);
 }
 .em.em-ice-cream {
-  background-position: -72px -1728px;
+	background-position: calc(-1 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-doughnut {
-  background-position: -144px -1728px;
+	background-position: calc(-2 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-cookie {
-  background-position: -216px -1728px;
+	background-position: calc(-3 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-birthday-cake {
-  background-position: -288px -1728px;
+	background-position: calc(-4 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-shortcake {
-  background-position: -360px -1728px;
+	background-position: calc(-5 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-chocolate-bar {
-  background-position: -432px -1728px;
+	background-position: calc(-6 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-candy {
-  background-position: -504px -1728px;
+	background-position: calc(-7 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-lollipop {
-  background-position: -576px -1728px;
+	background-position: calc(-8 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-custard {
-  background-position: -648px -1728px;
+	background-position: calc(-9 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-honey-pot {
-  background-position: -720px -1728px;
+	background-position: calc(-10 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-baby-bottle {
-  background-position: -792px -1728px;
+	background-position: calc(-11 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-hot-beverage {
-  background-position: -864px -1728px;
+	background-position: calc(-12 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-teacup-without-handle {
-  background-position: -936px -1728px;
+	background-position: calc(-13 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-sake {
-  background-position: -1008px -1728px;
+	background-position: calc(-14 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-wine-glass {
-  background-position: -1080px -1728px;
+	background-position: calc(-15 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-cocktail-glass {
-  background-position: -1152px -1728px;
+	background-position: calc(-16 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-tropical-drink {
-  background-position: -1224px -1728px;
+	background-position: calc(-17 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-beer-mug {
-  background-position: -1296px -1728px;
+	background-position: calc(-18 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-clinking-beer-mugs {
-  background-position: -1368px -1728px;
+	background-position: calc(-19 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-fork-and-knife {
-  background-position: -1440px -1728px;
+	background-position: calc(-20 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-kitchen-knife {
-  background-position: -1512px -1728px;
+	background-position: calc(-21 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-globe-showing-europe-africa {
-  background-position: -1584px -1728px;
+	background-position: calc(-22 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-globe-showing-americas {
-  background-position: -1656px -1728px;
+	background-position: calc(-23 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-globe-showing-asia-australia {
-  background-position: -1728px -1728px;
+	background-position: calc(-24 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-globe-with-meridians {
-  background-position: -1800px 0;
+	background-position: calc(-25 * 1.5em) 0;
 }
 .em.em-map-of-japan {
-  background-position: -1800px -72px;
+	background-position: calc(-25 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-volcano {
-  background-position: -1800px -144px;
+	background-position: calc(-25 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-mount-fuji {
-  background-position: -1800px -216px;
+	background-position: calc(-25 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-house {
-  background-position: -1800px -288px;
+	background-position: calc(-25 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-house-with-garden {
-  background-position: -1800px -360px;
+	background-position: calc(-25 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-office-building {
-  background-position: -1800px -432px;
+	background-position: calc(-25 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-japanese-post-office {
-  background-position: -1800px -504px;
+	background-position: calc(-25 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-post-office {
-  background-position: -1800px -576px;
+	background-position: calc(-25 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-hospital {
-  background-position: -1800px -648px;
+	background-position: calc(-25 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-bank {
-  background-position: -1800px -720px;
+	background-position: calc(-25 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-hotel {
-  background-position: -1800px -792px;
+	background-position: calc(-25 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-love-hotel {
-  background-position: -1800px -864px;
+	background-position: calc(-25 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-convenience-store {
-  background-position: -1800px -936px;
+	background-position: calc(-25 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-school {
-  background-position: -1800px -1008px;
+	background-position: calc(-25 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-department-store {
-  background-position: -1800px -1080px;
+	background-position: calc(-25 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-factory {
-  background-position: -1800px -1152px;
+	background-position: calc(-25 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-japanese-castle {
-  background-position: -1800px -1224px;
+	background-position: calc(-25 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-castle {
-  background-position: -1800px -1296px;
+	background-position: calc(-25 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-wedding {
-  background-position: -1800px -1368px;
+	background-position: calc(-25 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-tokyo-tower {
-  background-position: -1800px -1440px;
+	background-position: calc(-25 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-statue-of-liberty {
-  background-position: -1800px -1512px;
+	background-position: calc(-25 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-church {
-  background-position: -1800px -1584px;
+	background-position: calc(-25 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-fountain {
-  background-position: -1800px -1656px;
+	background-position: calc(-25 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-tent {
-  background-position: -1800px -1728px;
+	background-position: calc(-25 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-foggy {
-  background-position: 0 -1800px;
+	background-position: 0 calc(-25 * 1.5em);
 }
 .em.em-night-with-stars {
-  background-position: -72px -1800px;
+	background-position: calc(-1 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-sunrise-over-mountains {
-  background-position: -144px -1800px;
+	background-position: calc(-2 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-sunrise {
-  background-position: -216px -1800px;
+	background-position: calc(-3 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-cityscape-at-dusk {
-  background-position: -288px -1800px;
+	background-position: calc(-4 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-sunset {
-  background-position: -360px -1800px;
+	background-position: calc(-5 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-bridge-at-night {
-  background-position: -432px -1800px;
+	background-position: calc(-6 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-hot-springs {
-  background-position: -504px -1800px;
+	background-position: calc(-7 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-carousel-horse {
-  background-position: -576px -1800px;
+	background-position: calc(-8 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-ferris-wheel {
-  background-position: -648px -1800px;
+	background-position: calc(-9 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-roller-coaster {
-  background-position: -720px -1800px;
+	background-position: calc(-10 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-barber-pole {
-  background-position: -792px -1800px;
+	background-position: calc(-11 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-circus-tent {
-  background-position: -864px -1800px;
+	background-position: calc(-12 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-locomotive {
-  background-position: -936px -1800px;
+	background-position: calc(-13 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-railway-car {
-  background-position: -1008px -1800px;
+	background-position: calc(-14 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-high-speed-train {
-  background-position: -1080px -1800px;
+	background-position: calc(-15 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-bullet-train {
-  background-position: -1152px -1800px;
+	background-position: calc(-16 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-train {
-  background-position: -1224px -1800px;
+	background-position: calc(-17 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-metro {
-  background-position: -1296px -1800px;
+	background-position: calc(-18 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-light-rail {
-  background-position: -1368px -1800px;
+	background-position: calc(-19 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-station {
-  background-position: -1440px -1800px;
+	background-position: calc(-20 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-tram {
-  background-position: -1512px -1800px;
+	background-position: calc(-21 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-monorail {
-  background-position: -1584px -1800px;
+	background-position: calc(-22 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-mountain-railway {
-  background-position: -1656px -1800px;
+	background-position: calc(-23 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-tram-car {
-  background-position: -1728px -1800px;
+	background-position: calc(-24 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-bus {
-  background-position: -1800px -1800px;
+	background-position: calc(-25 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-oncoming-bus {
-  background-position: -1872px 0;
+	background-position: calc(-26 * 1.5em) 0;
 }
 .em.em-trolleybus {
-  background-position: -1872px -72px;
+	background-position: calc(-26 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-minibus {
-  background-position: -1872px -144px;
+	background-position: calc(-26 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-ambulance {
-  background-position: -1872px -216px;
+	background-position: calc(-26 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-fire-engine {
-  background-position: -1872px -288px;
+	background-position: calc(-26 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-police-car {
-  background-position: -1872px -360px;
+	background-position: calc(-26 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-oncoming-police-car {
-  background-position: -1872px -432px;
+	background-position: calc(-26 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-taxi {
-  background-position: -1872px -504px;
+	background-position: calc(-26 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-oncoming-taxi {
-  background-position: -1872px -576px;
+	background-position: calc(-26 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-automobile {
-  background-position: -1872px -648px;
+	background-position: calc(-26 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-oncoming-automobile {
-  background-position: -1872px -720px;
+	background-position: calc(-26 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-sport-utility-vehicle {
-  background-position: -1872px -792px;
+	background-position: calc(-26 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-delivery-truck {
-  background-position: -1872px -864px;
+	background-position: calc(-26 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-articulated-lorry {
-  background-position: -1872px -936px;
+	background-position: calc(-26 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-tractor {
-  background-position: -1872px -1008px;
+	background-position: calc(-26 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-bicycle {
-  background-position: -1872px -1080px;
+	background-position: calc(-26 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-bus-stop {
-  background-position: -1872px -1152px;
+	background-position: calc(-26 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-fuel-pump {
-  background-position: -1872px -1224px;
+	background-position: calc(-26 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-police-car-light {
-  background-position: -1872px -1296px;
+	background-position: calc(-26 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-horizontal-traffic-light {
-  background-position: -1872px -1368px;
+	background-position: calc(-26 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-vertical-traffic-light {
-  background-position: -1872px -1440px;
+	background-position: calc(-26 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-construction {
-  background-position: -1872px -1512px;
+	background-position: calc(-26 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-anchor {
-  background-position: -1872px -1584px;
+	background-position: calc(-26 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-sailboat {
-  background-position: -1872px -1656px;
+	background-position: calc(-26 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-speedboat {
-  background-position: -1872px -1728px;
+	background-position: calc(-26 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-ship {
-  background-position: -1872px -1800px;
+	background-position: calc(-26 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-airplane {
-  background-position: 0 -1872px;
+	background-position: 0 calc(-26 * 1.5em);
 }
 .em.em-seat {
-  background-position: -72px -1872px;
+	background-position: calc(-1 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-helicopter {
-  background-position: -144px -1872px;
+	background-position: calc(-2 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-suspension-railway {
-  background-position: -216px -1872px;
+	background-position: calc(-3 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-mountain-cableway {
-  background-position: -288px -1872px;
+	background-position: calc(-4 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-aerial-tramway {
-  background-position: -360px -1872px;
+	background-position: calc(-5 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-rocket {
-  background-position: -432px -1872px;
+	background-position: calc(-6 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-hourglass-done {
-  background-position: -504px -1872px;
+	background-position: calc(-7 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-hourglass-not-done {
-  background-position: -576px -1872px;
+	background-position: calc(-8 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-watch {
-  background-position: -648px -1872px;
+	background-position: calc(-9 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-alarm-clock {
-  background-position: -720px -1872px;
+	background-position: calc(-10 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-twelve-oclock {
-  background-position: -792px -1872px;
+	background-position: calc(-11 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-twelve-thirty {
-  background-position: -864px -1872px;
+	background-position: calc(-12 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-one-oclock {
-  background-position: -936px -1872px;
+	background-position: calc(-13 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-one-thirty {
-  background-position: -1008px -1872px;
+	background-position: calc(-14 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-two-oclocktime {
-  background-position: -1080px -1872px;
+	background-position: calc(-15 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-two-thirty {
-  background-position: -1152px -1872px;
+	background-position: calc(-16 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-three-oclock {
-  background-position: -1224px -1872px;
+	background-position: calc(-17 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-three-thirty {
-  background-position: -1296px -1872px;
+	background-position: calc(-18 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-four-oclock {
-  background-position: -1368px -1872px;
+	background-position: calc(-19 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-four-thirty {
-  background-position: -1440px -1872px;
+	background-position: calc(-20 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-five-oclock {
-  background-position: -1512px -1872px;
+	background-position: calc(-21 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-five-thirty {
-  background-position: -1584px -1872px;
+	background-position: calc(-22 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-six-oclock {
-  background-position: -1656px -1872px;
+	background-position: calc(-23 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-six-thirty {
-  background-position: -1728px -1872px;
+	background-position: calc(-24 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-seven-oclock {
-  background-position: -1800px -1872px;
+	background-position: calc(-25 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-seven-thirty {
-  background-position: -1872px -1872px;
+	background-position: calc(-26 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-eight-oclock {
-  background-position: -1944px 0;
+	background-position: calc(-27 * 1.5em) 0;
 }
 .em.em-eight-thirty {
-  background-position: -1944px -72px;
+	background-position: calc(-27 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-nine-oclock {
-  background-position: -1944px -144px;
+	background-position: calc(-27 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-nine-thirty {
-  background-position: -1944px -216px;
+	background-position: calc(-27 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-ten-oclock {
-  background-position: -1944px -288px;
+	background-position: calc(-27 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-ten-thirty {
-  background-position: -1944px -360px;
+	background-position: calc(-27 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-eleven-oclock {
-  background-position: -1944px -432px;
+	background-position: calc(-27 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-eleven-thirty {
-  background-position: -1944px -504px;
+	background-position: calc(-27 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-new-moon {
-  background-position: -1944px -576px;
+	background-position: calc(-27 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-waxing-crescent-moon {
-  background-position: -1944px -648px;
+	background-position: calc(-27 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-first-quarter-moon {
-  background-position: -1944px -720px;
+	background-position: calc(-27 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-waxing-gibbous-moon {
-  background-position: -1944px -792px;
+	background-position: calc(-27 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-full-moon {
-  background-position: -1944px -864px;
+	background-position: calc(-27 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-waning-gibbous-moon {
-  background-position: -1944px -936px;
+	background-position: calc(-27 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-last-quarter-moon {
-  background-position: -1944px -1008px;
+	background-position: calc(-27 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-waning-crescent-moon {
-  background-position: -1944px -1080px;
+	background-position: calc(-27 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-crescent-moon {
-  background-position: -1944px -1152px;
+	background-position: calc(-27 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-new-moon-face {
-  background-position: -1944px -1224px;
+	background-position: calc(-27 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-first-quarter-moon-face {
-  background-position: -1944px -1296px;
+	background-position: calc(-27 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-last-quarter-moon-face {
-  background-position: -1944px -1368px;
+	background-position: calc(-27 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-sun {
-  background-position: -1944px -1440px;
+	background-position: calc(-27 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-full-moon-face {
-  background-position: -1944px -1512px;
+	background-position: calc(-27 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-sun-with-face {
-  background-position: -1944px -1584px;
+	background-position: calc(-27 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-star {
-  background-position: -1944px -1656px;
+	background-position: calc(-27 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-glowing-star {
-  background-position: -1944px -1728px;
+	background-position: calc(-27 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-shooting-star {
-  background-position: -1944px -1800px;
+	background-position: calc(-27 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-milky-way {
-  background-position: -1944px -1872px;
+	background-position: calc(-27 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-cloud {
-  background-position: 0 -1944px;
+	background-position: 0 calc(-27 * 1.5em);
 }
 .em.em-sun-behind-cloud {
-  background-position: -72px -1944px;
+	background-position: calc(-1 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-cyclone {
-  background-position: -144px -1944px;
+	background-position: calc(-2 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-rainbow {
-  background-position: -216px -1944px;
+	background-position: calc(-3 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-closed-umbrella {
-  background-position: -288px -1944px;
+	background-position: calc(-4 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-umbrella-with-rain-drops {
-  background-position: -360px -1944px;
+	background-position: calc(-5 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-high-voltage {
-  background-position: -432px -1944px;
+	background-position: calc(-6 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-snowflake {
-  background-position: -504px -1944px;
+	background-position: calc(-7 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-snowman-without-snow {
-  background-position: -576px -1944px;
+	background-position: calc(-8 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-fire {
-  background-position: -648px -1944px;
+	background-position: calc(-9 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-droplet {
-  background-position: -720px -1944px;
+	background-position: calc(-10 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-water-wave {
-  background-position: -792px -1944px;
+	background-position: calc(-11 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-jack-o-lantern {
-  background-position: -864px -1944px;
+	background-position: calc(-12 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-christmas-tree {
-  background-position: -936px -1944px;
+	background-position: calc(-13 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-fireworks {
-  background-position: -1008px -1944px;
+	background-position: calc(-14 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-sparkler {
-  background-position: -1080px -1944px;
+	background-position: calc(-15 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-sparkles {
-  background-position: -1152px -1944px;
+	background-position: calc(-16 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-balloon {
-  background-position: -1224px -1944px;
+	background-position: calc(-17 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-party-popper {
-  background-position: -1296px -1944px;
+	background-position: calc(-18 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-confetti-ball {
-  background-position: -1368px -1944px;
+	background-position: calc(-19 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-tanabata-tree {
-  background-position: -1440px -1944px;
+	background-position: calc(-20 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-pine-decoration {
-  background-position: -1512px -1944px;
+	background-position: calc(-21 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-japanese-dolls {
-  background-position: -1584px -1944px;
+	background-position: calc(-22 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-carp-streamer {
-  background-position: -1656px -1944px;
+	background-position: calc(-23 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-wind-chime {
-  background-position: -1728px -1944px;
+	background-position: calc(-24 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-moon-viewing-ceremony {
-  background-position: -1800px -1944px;
+	background-position: calc(-25 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-ribbon {
-  background-position: -1872px -1944px;
+	background-position: calc(-26 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-wrapped-gift {
-  background-position: -1944px -1944px;
+	background-position: calc(-27 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-ticket {
-  background-position: -2016px 0;
+	background-position: calc(-28 * 1.5em) 0;
 }
 .em.em-trophy {
-  background-position: -2016px -72px;
+	background-position: calc(-28 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-soccer-ball {
-  background-position: -2016px -144px;
+	background-position: calc(-28 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-baseball {
-  background-position: -2016px -216px;
+	background-position: calc(-28 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-basketball {
-  background-position: -2016px -288px;
+	background-position: calc(-28 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-american-football {
-  background-position: -2016px -360px;
+	background-position: calc(-28 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-rugby-football {
-  background-position: -2016px -432px;
+	background-position: calc(-28 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-tennis {
-  background-position: -2016px -504px;
+	background-position: calc(-28 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-bowling {
-  background-position: -2016px -576px;
+	background-position: calc(-28 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-flag-in-hole {
-  background-position: -2016px -648px;
+	background-position: calc(-28 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-fishing-pole {
-  background-position: -2016px -720px;
+	background-position: calc(-28 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-running-shirt {
-  background-position: -2016px -792px;
+	background-position: calc(-28 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-skis {
-  background-position: -2016px -864px;
+	background-position: calc(-28 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-direct-hit {
-  background-position: -2016px -936px;
+	background-position: calc(-28 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-pool-8-ball {
-  background-position: -2016px -1008px;
+	background-position: calc(-28 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-crystal-ball {
-  background-position: -2016px -1080px;
+	background-position: calc(-28 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-video-game {
-  background-position: -2016px -1152px;
+	background-position: calc(-28 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-slot-machine {
-  background-position: -2016px -1224px;
+	background-position: calc(-28 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-game-die {
-  background-position: -2016px -1296px;
+	background-position: calc(-28 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-spade-suit {
-  background-position: -2016px -1368px;
+	background-position: calc(-28 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-heart-suit {
-  background-position: -2016px -1440px;
+	background-position: calc(-28 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-diamond-suit {
-  background-position: -2016px -1512px;
+	background-position: calc(-28 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-club-suit {
-  background-position: -2016px -1584px;
+	background-position: calc(-28 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-joker {
-  background-position: -2016px -1656px;
+	background-position: calc(-28 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-mahjong-red-dragon {
-  background-position: -2016px -1728px;
+	background-position: calc(-28 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-flower-playing-cards {
-  background-position: -2016px -1800px;
+	background-position: calc(-28 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-performing-arts {
-  background-position: -2016px -1872px;
+	background-position: calc(-28 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-artist-palette {
-  background-position: -2016px -1944px;
+	background-position: calc(-28 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-glasses {
-  background-position: 0 -2016px;
+	background-position: 0 calc(-28 * 1.5em);
 }
 .em.em-necktie {
-  background-position: -72px -2016px;
+	background-position: calc(-1 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-t-shirt {
-  background-position: -144px -2016px;
+	background-position: calc(-2 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-jeans {
-  background-position: -216px -2016px;
+	background-position: calc(-3 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-dress {
-  background-position: -288px -2016px;
+	background-position: calc(-4 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-kimono {
-  background-position: -360px -2016px;
+	background-position: calc(-5 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-bikini {
-  background-position: -432px -2016px;
+	background-position: calc(-6 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-womans-clothes {
-  background-position: -504px -2016px;
+	background-position: calc(-7 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-purse {
-  background-position: -576px -2016px;
+	background-position: calc(-8 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-handbag {
-  background-position: -648px -2016px;
+	background-position: calc(-9 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-clutch-bag {
-  background-position: -720px -2016px;
+	background-position: calc(-10 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-backpack {
-  background-position: -792px -2016px;
+	background-position: calc(-11 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-mans-shoe {
-  background-position: -864px -2016px;
+	background-position: calc(-12 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-running-shoe {
-  background-position: -936px -2016px;
+	background-position: calc(-13 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-high-heeled-shoe {
-  background-position: -1008px -2016px;
+	background-position: calc(-14 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-womans-sandal {
-  background-position: -1080px -2016px;
+	background-position: calc(-15 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-womans-boot {
-  background-position: -1152px -2016px;
+	background-position: calc(-16 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-crown {
-  background-position: -1224px -2016px;
+	background-position: calc(-17 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-womans-hat {
-  background-position: -1296px -2016px;
+	background-position: calc(-18 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-top-hat {
-  background-position: -1368px -2016px;
+	background-position: calc(-19 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-graduation-cap {
-  background-position: -1440px -2016px;
+	background-position: calc(-20 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-lipstick {
-  background-position: -1512px -2016px;
+	background-position: calc(-21 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-ring {
-  background-position: -1584px -2016px;
+	background-position: calc(-22 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-gem-stone {
-  background-position: -1656px -2016px;
+	background-position: calc(-23 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-muted-speaker {
-  background-position: -1728px -2016px;
+	background-position: calc(-24 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-speaker-low-volume {
-  background-position: -1800px -2016px;
+	background-position: calc(-25 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-speaker-medium-volume {
-  background-position: -1872px -2016px;
+	background-position: calc(-26 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-speaker-high-volume {
-  background-position: -1944px -2016px;
+	background-position: calc(-27 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-loudspeaker {
-  background-position: -2016px -2016px;
+	background-position: calc(-28 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-megaphone {
-  background-position: -2088px 0;
+	background-position: calc(-29 * 1.5em) 0;
 }
 .em.em-postal-horn {
-  background-position: -2088px -72px;
+	background-position: calc(-29 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-bell {
-  background-position: -2088px -144px;
+	background-position: calc(-29 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-bell-with-slash {
-  background-position: -2088px -216px;
+	background-position: calc(-29 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-musical-score {
-  background-position: -2088px -288px;
+	background-position: calc(-29 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-musical-note {
-  background-position: -2088px -360px;
+	background-position: calc(-29 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-musical-notes {
-  background-position: -2088px -432px;
+	background-position: calc(-29 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-microphone {
-  background-position: -2088px -504px;
+	background-position: calc(-29 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-headphone {
-  background-position: -2088px -576px;
+	background-position: calc(-29 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-radio {
-  background-position: -2088px -648px;
+	background-position: calc(-29 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-saxophone {
-  background-position: -2088px -720px;
+	background-position: calc(-29 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-guitar {
-  background-position: -2088px -792px;
+	background-position: calc(-29 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-musical-keyboard {
-  background-position: -2088px -864px;
+	background-position: calc(-29 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-trumpet {
-  background-position: -2088px -936px;
+	background-position: calc(-29 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-violin {
-  background-position: -2088px -1008px;
+	background-position: calc(-29 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-mobile-phone {
-  background-position: -2088px -1080px;
+	background-position: calc(-29 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-mobile-phone-with-arrow {
-  background-position: -2088px -1152px;
+	background-position: calc(-29 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-telephone {
-  background-position: -2088px -1224px;
+	background-position: calc(-29 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-telephone-receiver {
-  background-position: -2088px -1296px;
+	background-position: calc(-29 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-pager {
-  background-position: -2088px -1368px;
+	background-position: calc(-29 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-fax-machine {
-  background-position: -2088px -1440px;
+	background-position: calc(-29 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-battery {
-  background-position: -2088px -1512px;
+	background-position: calc(-29 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-electric-plug {
-  background-position: -2088px -1584px;
+	background-position: calc(-29 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-laptop {
-  background-position: -2088px -1656px;
+	background-position: calc(-29 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-computer-disk {
-  background-position: -2088px -1728px;
+	background-position: calc(-29 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-floppy-disk {
-  background-position: -2088px -1800px;
+	background-position: calc(-29 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-optical-disk {
-  background-position: -2088px -1872px;
+	background-position: calc(-29 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-dvd {
-  background-position: -2088px -1944px;
+	background-position: calc(-29 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-movie-camera {
-  background-position: -2088px -2016px;
+	background-position: calc(-29 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-clapper-board {
-  background-position: 0 -2088px;
+	background-position: 0 calc(-29 * 1.5em);
 }
 .em.em-television {
-  background-position: -72px -2088px;
+	background-position: calc(-1 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-camera {
-  background-position: -144px -2088px;
+	background-position: calc(-2 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-video-camera {
-  background-position: -216px -2088px;
+	background-position: calc(-3 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-videocassette {
-  background-position: -288px -2088px;
+	background-position: calc(-4 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-magnifying-glass-tilted-left {
-  background-position: -360px -2088px;
+	background-position: calc(-5 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-magnifying-glass-tilted-right {
-  background-position: -432px -2088px;
+	background-position: calc(-6 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-light-bulb {
-  background-position: -504px -2088px;
+	background-position: calc(-7 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-flashlight {
-  background-position: -576px -2088px;
+	background-position: calc(-8 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-red-paper-lantern {
-  background-position: -648px -2088px;
+	background-position: calc(-9 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-notebook-with-decorative-cover {
-  background-position: -720px -2088px;
+	background-position: calc(-10 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-closed-book {
-  background-position: -792px -2088px;
+	background-position: calc(-11 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-open-book {
-  background-position: -864px -2088px;
+	background-position: calc(-12 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-green-book {
-  background-position: -936px -2088px;
+	background-position: calc(-13 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-blue-book {
-  background-position: -1008px -2088px;
+	background-position: calc(-14 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-orange-book {
-  background-position: -1080px -2088px;
+	background-position: calc(-15 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-books {
-  background-position: -1152px -2088px;
+	background-position: calc(-16 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-notebook {
-  background-position: -1224px -2088px;
+	background-position: calc(-17 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-ledger {
-  background-position: -1296px -2088px;
+	background-position: calc(-18 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-page-with-curl {
-  background-position: -1368px -2088px;
+	background-position: calc(-19 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-scroll {
-  background-position: -1440px -2088px;
+	background-position: calc(-20 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-page-facing-up {
-  background-position: -1512px -2088px;
+	background-position: calc(-21 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-newspaper {
-  background-position: -1584px -2088px;
+	background-position: calc(-22 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-bookmark-tabs {
-  background-position: -1656px -2088px;
+	background-position: calc(-23 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-bookmark {
-  background-position: -1728px -2088px;
+	background-position: calc(-24 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-money-bag {
-  background-position: -1800px -2088px;
+	background-position: calc(-25 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-yen-banknote {
-  background-position: -1872px -2088px;
+	background-position: calc(-26 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-dollar-banknote {
-  background-position: -1944px -2088px;
+	background-position: calc(-27 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-euro-banknote {
-  background-position: -2016px -2088px;
+	background-position: calc(-28 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-pound-banknote {
-  background-position: -2088px -2088px;
+	background-position: calc(-29 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-money-with-wings {
-  background-position: -2160px 0;
+	background-position: calc(-30 * 1.5em) 0;
 }
 .em.em-credit-card {
-  background-position: -2160px -72px;
+	background-position: calc(-30 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-chart-increasing-with-yen {
-  background-position: -2160px -144px;
+	background-position: calc(-30 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-envelope {
-  background-position: -2160px -216px;
+	background-position: calc(-30 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-e-mail {
-  background-position: -2160px -288px;
+	background-position: calc(-30 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-incoming-envelope {
-  background-position: -2160px -360px;
+	background-position: calc(-30 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-envelope-with-arrow {
-  background-position: -2160px -432px;
+	background-position: calc(-30 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-outbox-tray {
-  background-position: -2160px -504px;
+	background-position: calc(-30 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-inbox-tray {
-  background-position: -2160px -576px;
+	background-position: calc(-30 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-package {
-  background-position: -2160px -648px;
+	background-position: calc(-30 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-closed-mailbox-with-raised-flag {
-  background-position: -2160px -720px;
+	background-position: calc(-30 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-closed-mailbox-with-lowered-flag {
-  background-position: -2160px -792px;
+	background-position: calc(-30 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-open-mailbox-with-raised-flag {
-  background-position: -2160px -864px;
+	background-position: calc(-30 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-open-mailbox-with-lowered-flag {
-  background-position: -2160px -936px;
+	background-position: calc(-30 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-postbox {
-  background-position: -2160px -1008px;
+	background-position: calc(-30 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-pencil {
-  background-position: -2160px -1080px;
+	background-position: calc(-30 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-black-nib {
-  background-position: -2160px -1152px;
+	background-position: calc(-30 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-memo {
-  background-position: -2160px -1224px;
+	background-position: calc(-30 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-briefcase {
-  background-position: -2160px -1296px;
+	background-position: calc(-30 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-file-folder {
-  background-position: -2160px -1368px;
+	background-position: calc(-30 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-open-file-folder {
-  background-position: -2160px -1440px;
+	background-position: calc(-30 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-calendar {
-  background-position: -2160px -1512px;
+	background-position: calc(-30 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-tear-off-calendar {
-  background-position: -2160px -1584px;
+	background-position: calc(-30 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-card-index {
-  background-position: -2160px -1656px;
+	background-position: calc(-30 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-chart-increasing {
-  background-position: -2160px -1728px;
+	background-position: calc(-30 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-chart-decreasing {
-  background-position: -2160px -1800px;
+	background-position: calc(-30 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-bar-chart {
-  background-position: -2160px -1872px;
+	background-position: calc(-30 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-clipboard {
-  background-position: -2160px -1944px;
+	background-position: calc(-30 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-pushpin {
-  background-position: -2160px -2016px;
+	background-position: calc(-30 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-round-pushpin {
-  background-position: -2160px -2088px;
+	background-position: calc(-30 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-paperclip {
-  background-position: 0 -2160px;
+	background-position: 0 calc(-30 * 1.5em);
 }
 .em.em-straight-ruler {
-  background-position: -72px -2160px;
+	background-position: calc(-1 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-triangular-ruler {
-  background-position: -144px -2160px;
+	background-position: calc(-2 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-scissors {
-  background-position: -216px -2160px;
+	background-position: calc(-3 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-locked {
-  background-position: -288px -2160px;
+	background-position: calc(-4 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-unlocked {
-  background-position: -360px -2160px;
+	background-position: calc(-5 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-locked-with-pen {
-  background-position: -432px -2160px;
+	background-position: calc(-6 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-locked-with-key {
-  background-position: -504px -2160px;
+	background-position: calc(-7 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-key {
-  background-position: -576px -2160px;
+	background-position: calc(-8 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-hammer {
-  background-position: -648px -2160px;
+	background-position: calc(-9 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-pistol {
-  background-position: -720px -2160px;
+	background-position: calc(-10 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-wrench {
-  background-position: -792px -2160px;
+	background-position: calc(-11 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-nut-and-bolt {
-  background-position: -864px -2160px;
+	background-position: calc(-12 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-link {
-  background-position: -936px -2160px;
+	background-position: calc(-13 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-microscope {
-  background-position: -1008px -2160px;
+	background-position: calc(-14 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-telescope {
-  background-position: -1080px -2160px;
+	background-position: calc(-15 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-satellite-antenna {
-  background-position: -1152px -2160px;
+	background-position: calc(-16 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-syringe {
-  background-position: -1224px -2160px;
+	background-position: calc(-17 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-pill {
-  background-position: -1296px -2160px;
+	background-position: calc(-18 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-door {
-  background-position: -1368px -2160px;
+	background-position: calc(-19 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-toilet {
-  background-position: -1440px -2160px;
+	background-position: calc(-20 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-shower {
-  background-position: -1512px -2160px;
+	background-position: calc(-21 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-bathtub {
-  background-position: -1584px -2160px;
+	background-position: calc(-22 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-cigarette {
-  background-position: -1656px -2160px;
+	background-position: calc(-23 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-moai {
-  background-position: -1728px -2160px;
+	background-position: calc(-24 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-atm-sign {
-  background-position: -1800px -2160px;
+	background-position: calc(-25 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-litter-in-bin-sign {
-  background-position: -1872px -2160px;
+	background-position: calc(-26 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-potable-water {
-  background-position: -1944px -2160px;
+	background-position: calc(-27 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-wheelchair-symbol {
-  background-position: -2016px -2160px;
+	background-position: calc(-28 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-mens-room {
-  background-position: -2088px -2160px;
+	background-position: calc(-29 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-womens-room {
-  background-position: -2160px -2160px;
+	background-position: calc(-30 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-restroom {
-  background-position: -2232px 0;
+	background-position: calc(-31 * 1.5em) 0;
 }
 .em.em-baby-symbol {
-  background-position: -2232px -72px;
+	background-position: calc(-31 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-water-closet {
-  background-position: -2232px -144px;
+	background-position: calc(-31 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-passport-control {
-  background-position: -2232px -216px;
+	background-position: calc(-31 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-customs {
-  background-position: -2232px -288px;
+	background-position: calc(-31 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-baggage-claim {
-  background-position: -2232px -360px;
+	background-position: calc(-31 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-left-luggage {
-  background-position: -2232px -432px;
+	background-position: calc(-31 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-warning {
-  background-position: -2232px -504px;
+	background-position: calc(-31 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-children-crossing {
-  background-position: -2232px -576px;
+	background-position: calc(-31 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-no-entry {
-  background-position: -2232px -648px;
+	background-position: calc(-31 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-prohibited {
-  background-position: -2232px -720px;
+	background-position: calc(-31 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-no-bicycles {
-  background-position: -2232px -792px;
+	background-position: calc(-31 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-no-smoking {
-  background-position: -2232px -864px;
+	background-position: calc(-31 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-no-littering {
-  background-position: -2232px -936px;
+	background-position: calc(-31 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-non-potable-water {
-  background-position: -2232px -1008px;
+	background-position: calc(-31 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-no-pedestrians {
-  background-position: -2232px -1080px;
+	background-position: calc(-31 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-no-mobile-phones {
-  background-position: -2232px -1152px;
+	background-position: calc(-31 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-no-one-under-eighteen {
-  background-position: -2232px -1224px;
+	background-position: calc(-31 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-up-arrow {
-  background-position: -2232px -1296px;
+	background-position: calc(-31 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-up-right-arrow {
-  background-position: -2232px -1368px;
+	background-position: calc(-31 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-right-arrow {
-  background-position: -2232px -1440px;
+	background-position: calc(-31 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-down-right-arrow {
-  background-position: -2232px -1512px;
+	background-position: calc(-31 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-down-arrow {
-  background-position: -2232px -1584px;
+	background-position: calc(-31 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-down-left-arrow {
-  background-position: -2232px -1656px;
+	background-position: calc(-31 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-left-arrow {
-  background-position: -2232px -1728px;
+	background-position: calc(-31 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-up-left-arrow {
-  background-position: -2232px -1800px;
+	background-position: calc(-31 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-up-down-arrow {
-  background-position: -2232px -1872px;
+	background-position: calc(-31 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-left-right-arrow {
-  background-position: -2232px -1944px;
+	background-position: calc(-31 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-right-arrow-curving-left {
-  background-position: -2232px -2016px;
+	background-position: calc(-31 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-left-arrow-curving-right {
-  background-position: -2232px -2088px;
+	background-position: calc(-31 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-right-arrow-curving-up {
-  background-position: -2232px -2160px;
+	background-position: calc(-31 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-right-arrow-curving-down {
-  background-position: 0 -2232px;
+	background-position: 0 calc(-31 * 1.5em);
 }
 .em.em-clockwise-vertical-arrows {
-  background-position: -72px -2232px;
+	background-position: calc(-1 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-counterclockwise-arrows-button {
-  background-position: -144px -2232px;
+	background-position: calc(-2 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-back-arrow {
-  background-position: -216px -2232px;
+	background-position: calc(-3 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-end-arrow {
-  background-position: -288px -2232px;
+	background-position: calc(-4 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-on-arrow {
-  background-position: -360px -2232px;
+	background-position: calc(-5 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-soon-arrow {
-  background-position: -432px -2232px;
+	background-position: calc(-6 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-top-arrow {
-  background-position: -504px -2232px;
+	background-position: calc(-7 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-dotted-six-pointed-star {
-  background-position: -576px -2232px;
+	background-position: calc(-8 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-aries {
-  background-position: -648px -2232px;
+	background-position: calc(-9 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-taurus {
-  background-position: -720px -2232px;
+	background-position: calc(-10 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-gemini {
-  background-position: -792px -2232px;
+	background-position: calc(-11 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-cancer {
-  background-position: -864px -2232px;
+	background-position: calc(-12 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-leo {
-  background-position: -936px -2232px;
+	background-position: calc(-13 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-virgo {
-  background-position: -1008px -2232px;
+	background-position: calc(-14 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-libra {
-  background-position: -1080px -2232px;
+	background-position: calc(-15 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-scorpio {
-  background-position: -1152px -2232px;
+	background-position: calc(-16 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-sagittarius {
-  background-position: -1224px -2232px;
+	background-position: calc(-17 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-capricorn {
-  background-position: -1296px -2232px;
+	background-position: calc(-18 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-aquarius {
-  background-position: -1368px -2232px;
+	background-position: calc(-19 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-pisces {
-  background-position: -1440px -2232px;
+	background-position: calc(-20 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-ophiuchus {
-  background-position: -1512px -2232px;
+	background-position: calc(-21 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-shuffle-tracks-button {
-  background-position: -1584px -2232px;
+	background-position: calc(-22 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-repeat-button {
-  background-position: -1656px -2232px;
+	background-position: calc(-23 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-repeat-single-button {
-  background-position: -1728px -2232px;
+	background-position: calc(-24 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-play-button {
-  background-position: -1800px -2232px;
+	background-position: calc(-25 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-fast-forward-button {
-  background-position: -1872px -2232px;
+	background-position: calc(-26 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-reverse-button {
-  background-position: -1944px -2232px;
+	background-position: calc(-27 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-fast-reverse-button {
-  background-position: -2016px -2232px;
+	background-position: calc(-28 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-upwards-button {
-  background-position: -2088px -2232px;
+	background-position: calc(-29 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-fast-up-button {
-  background-position: -2160px -2232px;
+	background-position: calc(-30 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-downwards-button {
-  background-position: -2232px -2232px;
+	background-position: calc(-31 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-fast-down-button {
-  background-position: -2304px 0;
+	background-position: calc(-32 * 1.5em) 0;
 }
 .em.em-cinema {
-  background-position: -2304px -72px;
+	background-position: calc(-32 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-dim-button {
-  background-position: -2304px -144px;
+	background-position: calc(-32 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-bright-button {
-  background-position: -2304px -216px;
+	background-position: calc(-32 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-antenna-bars {
-  background-position: -2304px -288px;
+	background-position: calc(-32 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-vibration-mode {
-  background-position: -2304px -360px;
+	background-position: calc(-32 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-mobile-phone-off {
-  background-position: -2304px -432px;
+	background-position: calc(-32 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-multiply {
-  background-position: -2304px -504px;
+	background-position: calc(-32 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-plus {
-  background-position: -2304px -576px;
+	background-position: calc(-32 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-minus {
-  background-position: -2304px -648px;
+	background-position: calc(-32 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-divide {
-  background-position: -2304px -720px;
+	background-position: calc(-32 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-double-exclamation-mark {
-  background-position: -2304px -792px;
+	background-position: calc(-32 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-exclamation-question-mark {
-  background-position: -2304px -864px;
+	background-position: calc(-32 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-question-mark {
-  background-position: -2304px -936px;
+	background-position: calc(-32 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-white-question-mark {
-  background-position: -2304px -1008px;
+	background-position: calc(-32 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-white-exclamation-mark {
-  background-position: -2304px -1080px;
+	background-position: calc(-32 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-exclamation-mark {
-  background-position: -2304px -1152px;
+	background-position: calc(-32 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-wavy-dash {
-  background-position: -2304px -1224px;
+	background-position: calc(-32 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-currency-exchange {
-  background-position: -2304px -1296px;
+	background-position: calc(-32 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-heavy-dollar-sign {
-  background-position: -2304px -1368px;
+	background-position: calc(-32 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-recycling-symbol {
-  background-position: -2304px -1440px;
+	background-position: calc(-32 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-trident-emblem {
-  background-position: -2304px -1512px;
+	background-position: calc(-32 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-name-badge {
-  background-position: -2304px -1584px;
+	background-position: calc(-32 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-japanese-symbol-for-beginner {
-  background-position: -2304px -1656px;
+	background-position: calc(-32 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-hollow-red-circle {
-  background-position: -2304px -1728px;
+	background-position: calc(-32 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-check-mark-button {
-  background-position: -2304px -1800px;
+	background-position: calc(-32 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-check-box-with-check {
-  background-position: -2304px -1872px;
+	background-position: calc(-32 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-check-mark {
-  background-position: -2304px -1944px;
+	background-position: calc(-32 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-cross-mark {
-  background-position: -2304px -2016px;
+	background-position: calc(-32 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-cross-mark-button {
-  background-position: -2304px -2088px;
+	background-position: calc(-32 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-curly-loop {
-  background-position: -2304px -2160px;
+	background-position: calc(-32 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-double-curly-loop {
-  background-position: -2304px -2232px;
+	background-position: calc(-32 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-part-alternation-mark {
-  background-position: 0 -2304px;
+	background-position: 0 calc(-32 * 1.5em);
 }
 .em.em-eight-spoked-asterisk {
-  background-position: -72px -2304px;
+	background-position: calc(-1 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-eight-pointed-star {
-  background-position: -144px -2304px;
+	background-position: calc(-2 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-sparkle {
-  background-position: -216px -2304px;
+	background-position: calc(-3 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-copyright {
-  background-position: -288px -2304px;
+	background-position: calc(-4 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-registered {
-  background-position: -360px -2304px;
+	background-position: calc(-5 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-trade-mark {
-  background-position: -432px -2304px;
+	background-position: calc(-6 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-number-sign {
-  background-position: -504px -2304px;
+	background-position: calc(-7 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-zero {
-  background-position: -576px -2304px;
+	background-position: calc(-8 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-one {
-  background-position: -648px -2304px;
+	background-position: calc(-9 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-two {
-  background-position: -720px -2304px;
+	background-position: calc(-10 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-three {
-  background-position: -792px -2304px;
+	background-position: calc(-11 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-four {
-  background-position: -864px -2304px;
+	background-position: calc(-12 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-five {
-  background-position: -936px -2304px;
+	background-position: calc(-13 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-six {
-  background-position: -1008px -2304px;
+	background-position: calc(-14 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-seven {
-  background-position: -1080px -2304px;
+	background-position: calc(-15 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-eight {
-  background-position: -1152px -2304px;
+	background-position: calc(-16 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-digit-nine {
-  background-position: -1224px -2304px;
+	background-position: calc(-17 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-keycap-10 {
-  background-position: -1296px -2304px;
+	background-position: calc(-18 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-input-latin-uppercase {
-  background-position: -1368px -2304px;
+	background-position: calc(-19 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-input-latin-lowercase {
-  background-position: -1440px -2304px;
+	background-position: calc(-20 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-input-numbers {
-  background-position: -1512px -2304px;
+	background-position: calc(-21 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-input-symbols {
-  background-position: -1584px -2304px;
+	background-position: calc(-22 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-input-latin-letters {
-  background-position: -1656px -2304px;
+	background-position: calc(-23 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-a-button-blood-type {
-  background-position: -1728px -2304px;
+	background-position: calc(-24 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-ab-button-blood-type {
-  background-position: -1800px -2304px;
+	background-position: calc(-25 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-b-button-blood-type {
-  background-position: -1872px -2304px;
+	background-position: calc(-26 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-cl-button {
-  background-position: -1944px -2304px;
+	background-position: calc(-27 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-cool-button {
-  background-position: -2016px -2304px;
+	background-position: calc(-28 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-free-button {
-  background-position: -2088px -2304px;
+	background-position: calc(-29 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-information {
-  background-position: -2160px -2304px;
+	background-position: calc(-30 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-id-button {
-  background-position: -2232px -2304px;
+	background-position: calc(-31 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-circled-m {
-  background-position: -2304px -2304px;
+	background-position: calc(-32 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-new-button {
-  background-position: -2376px 0;
+	background-position: calc(-33 * 1.5em) 0;
 }
 .em.em-ng-button {
-  background-position: -2376px -72px;
+	background-position: calc(-33 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-o-button-blood-type {
-  background-position: -2376px -144px;
+	background-position: calc(-33 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-ok-button {
-  background-position: -2376px -216px;
+	background-position: calc(-33 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-p-button {
-  background-position: -2376px -288px;
+	background-position: calc(-33 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-sos-button {
-  background-position: -2376px -360px;
+	background-position: calc(-33 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-up-button {
-  background-position: -2376px -432px;
+	background-position: calc(-33 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-vs-button {
-  background-position: -2376px -504px;
+	background-position: calc(-33 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-japanese-here-button {
-  background-position: -2376px -576px;
+	background-position: calc(-33 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-japanese-service-charge-button {
-  background-position: -2376px -648px;
+	background-position: calc(-33 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-japanese-monthly-amount-button {
-  background-position: -2376px -720px;
+	background-position: calc(-33 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-japanese-not-free-of-charge-button {
-  background-position: -2376px -792px;
+	background-position: calc(-33 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-japanese-reserved-button {
-  background-position: -2376px -864px;
+	background-position: calc(-33 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-japanese-bargain-button {
-  background-position: -2376px -936px;
+	background-position: calc(-33 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-japanese-discount-button {
-  background-position: -2376px -1008px;
+	background-position: calc(-33 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-japanese-free-of-charge-button {
-  background-position: -2376px -1080px;
+	background-position: calc(-33 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-japanese-prohibited-button {
-  background-position: -2376px -1152px;
+	background-position: calc(-33 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-japanese-acceptable-button {
-  background-position: -2376px -1224px;
+	background-position: calc(-33 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-japanese-application-button {
-  background-position: -2376px -1296px;
+	background-position: calc(-33 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-japanese-passing-grade-button {
-  background-position: -2376px -1368px;
+	background-position: calc(-33 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-japanese-vacancy-button {
-  background-position: -2376px -1440px;
+	background-position: calc(-33 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-japanese-congratulations-button {
-  background-position: -2376px -1512px;
+	background-position: calc(-33 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-japanese-secret-button {
-  background-position: -2376px -1584px;
+	background-position: calc(-33 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-japanese-open-for-business-button {
-  background-position: -2376px -1656px;
+	background-position: calc(-33 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-japanese-no-vacancy-button {
-  background-position: -2376px -1728px;
+	background-position: calc(-33 * 1.5em) calc(-24 * 1.5em);
 }
 .em.em-large-red-circle {
-  background-position: -2376px -1800px;
+	background-position: calc(-33 * 1.5em) calc(-25 * 1.5em);
 }
 .em.em-large-blue-circle {
-  background-position: -2376px -1872px;
+	background-position: calc(-33 * 1.5em) calc(-26 * 1.5em);
 }
 .em.em-black-circle {
-  background-position: -2376px -1944px;
+	background-position: calc(-33 * 1.5em) calc(-27 * 1.5em);
 }
 .em.em-white-circle {
-  background-position: -2376px -2016px;
+	background-position: calc(-33 * 1.5em) calc(-28 * 1.5em);
 }
 .em.em-black-large-square {
-  background-position: -2376px -2088px;
+	background-position: calc(-33 * 1.5em) calc(-29 * 1.5em);
 }
 .em.em-white-large-square {
-  background-position: -2376px -2160px;
+	background-position: calc(-33 * 1.5em) calc(-30 * 1.5em);
 }
 .em.em-black-medium-square {
-  background-position: -2376px -2232px;
+	background-position: calc(-33 * 1.5em) calc(-31 * 1.5em);
 }
 .em.em-white-medium-square {
-  background-position: -2376px -2304px;
+	background-position: calc(-33 * 1.5em) calc(-32 * 1.5em);
 }
 .em.em-black-medium-small-square {
-  background-position: 0 -2376px;
+	background-position: 0 calc(-33 * 1.5em);
 }
 .em.em-white-medium-small-square {
-  background-position: -72px -2376px;
+	background-position: calc(-1 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-black-small-square {
-  background-position: -144px -2376px;
+	background-position: calc(-2 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-white-small-square {
-  background-position: -216px -2376px;
+	background-position: calc(-3 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-large-orange-diamond {
-  background-position: -288px -2376px;
+	background-position: calc(-4 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-large-blue-diamond {
-  background-position: -360px -2376px;
+	background-position: calc(-5 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-small-orange-diamond {
-  background-position: -432px -2376px;
+	background-position: calc(-6 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-small-blue-diamond {
-  background-position: -504px -2376px;
+	background-position: calc(-7 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-red-triangle-pointed-up {
-  background-position: -576px -2376px;
+	background-position: calc(-8 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-red-triangle-pointed-down {
-  background-position: -648px -2376px;
+	background-position: calc(-9 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-diamond-with-a-dot {
-  background-position: -720px -2376px;
+	background-position: calc(-10 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-radio-button {
-  background-position: -792px -2376px;
+	background-position: calc(-11 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-white-square-button {
-  background-position: -864px -2376px;
+	background-position: calc(-12 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-black-square-button {
-  background-position: -936px -2376px;
+	background-position: calc(-13 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-chequered-flag {
-  background-position: -1008px -2376px;
+	background-position: calc(-14 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-triangular-flag {
-  background-position: -1080px -2376px;
+	background-position: calc(-15 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-crossed-flags {
-  background-position: -1152px -2376px;
+	background-position: calc(-16 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-united-arab-emirates {
-  background-position: -1224px -2376px;
+	background-position: calc(-17 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-austria {
-  background-position: -1296px -2376px;
+	background-position: calc(-18 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-australia {
-  background-position: -1368px -2376px;
+	background-position: calc(-19 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-belgium {
-  background-position: -1440px -2376px;
+	background-position: calc(-20 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-brazil {
-  background-position: -1512px -2376px;
+	background-position: calc(-21 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-canada {
-  background-position: -1584px -2376px;
+	background-position: calc(-22 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-switzerland {
-  background-position: -1656px -2376px;
+	background-position: calc(-23 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-chile {
-  background-position: -1728px -2376px;
+	background-position: calc(-24 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-china {
-  background-position: -1800px -2376px;
+	background-position: calc(-25 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-colombia {
-  background-position: -1872px -2376px;
+	background-position: calc(-26 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-germany {
-  background-position: -1944px -2376px;
+	background-position: calc(-27 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-denmark {
-  background-position: -2016px -2376px;
+	background-position: calc(-28 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-spain {
-  background-position: -2088px -2376px;
+	background-position: calc(-29 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-finland {
-  background-position: -2160px -2376px;
+	background-position: calc(-30 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-france {
-  background-position: -2232px -2376px;
+	background-position: calc(-31 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-united-kingdom {
-  background-position: -2304px -2376px;
+	background-position: calc(-32 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-hong-kong-sar-china {
-  background-position: -2376px -2376px;
+	background-position: calc(-33 * 1.5em) calc(-33 * 1.5em);
 }
 .em.em-flag-indonesia {
-  background-position: -2448px 0;
+	background-position: calc(-34 * 1.5em) 0;
 }
 .em.em-flag-ireland {
-  background-position: -2448px -72px;
+	background-position: calc(-34 * 1.5em) calc(-1 * 1.5em);
 }
 .em.em-flag-israel {
-  background-position: -2448px -144px;
+	background-position: calc(-34 * 1.5em) calc(-2 * 1.5em);
 }
 .em.em-flag-india {
-  background-position: -2448px -216px;
+	background-position: calc(-34 * 1.5em) calc(-3 * 1.5em);
 }
 .em.em-flag-italy {
-  background-position: -2448px -288px;
+	background-position: calc(-34 * 1.5em) calc(-4 * 1.5em);
 }
 .em.em-flag-japan {
-  background-position: -2448px -360px;
+	background-position: calc(-34 * 1.5em) calc(-5 * 1.5em);
 }
 .em.em-flag-south-korea {
-  background-position: -2448px -432px;
+	background-position: calc(-34 * 1.5em) calc(-6 * 1.5em);
 }
 .em.em-flag-macao-sar-china {
-  background-position: -2448px -504px;
+	background-position: calc(-34 * 1.5em) calc(-7 * 1.5em);
 }
 .em.em-flag-mexico {
-  background-position: -2448px -576px;
+	background-position: calc(-34 * 1.5em) calc(-8 * 1.5em);
 }
 .em.em-flag-malaysia {
-  background-position: -2448px -648px;
+	background-position: calc(-34 * 1.5em) calc(-9 * 1.5em);
 }
 .em.em-flag-netherlands {
-  background-position: -2448px -720px;
+	background-position: calc(-34 * 1.5em) calc(-10 * 1.5em);
 }
 .em.em-flag-norway {
-  background-position: -2448px -792px;
+	background-position: calc(-34 * 1.5em) calc(-11 * 1.5em);
 }
 .em.em-flag-new-zealand {
-  background-position: -2448px -864px;
+	background-position: calc(-34 * 1.5em) calc(-12 * 1.5em);
 }
 .em.em-flag-philippines {
-  background-position: -2448px -936px;
+	background-position: calc(-34 * 1.5em) calc(-13 * 1.5em);
 }
 .em.em-flag-poland {
-  background-position: -2448px -1008px;
+	background-position: calc(-34 * 1.5em) calc(-14 * 1.5em);
 }
 .em.em-flag-puerto-rico {
-  background-position: -2448px -1080px;
+	background-position: calc(-34 * 1.5em) calc(-15 * 1.5em);
 }
 .em.em-flag-portugal {
-  background-position: -2448px -1152px;
+	background-position: calc(-34 * 1.5em) calc(-16 * 1.5em);
 }
 .em.em-flag-russia {
-  background-position: -2448px -1224px;
+	background-position: calc(-34 * 1.5em) calc(-17 * 1.5em);
 }
 .em.em-flag-saudi-arabia {
-  background-position: -2448px -1296px;
+	background-position: calc(-34 * 1.5em) calc(-18 * 1.5em);
 }
 .em.em-flag-sweden {
-  background-position: -2448px -1368px;
+	background-position: calc(-34 * 1.5em) calc(-19 * 1.5em);
 }
 .em.em-flag-singapore {
-  background-position: -2448px -1440px;
+	background-position: calc(-34 * 1.5em) calc(-20 * 1.5em);
 }
 .em.em-flag-turkey {
-  background-position: -2448px -1512px;
+	background-position: calc(-34 * 1.5em) calc(-21 * 1.5em);
 }
 .em.em-flag-united-states {
-  background-position: -2448px -1584px;
+	background-position: calc(-34 * 1.5em) calc(-22 * 1.5em);
 }
 .em.em-flag-vietnam {
-  background-position: -2448px -1656px;
+	background-position: calc(-34 * 1.5em) calc(-23 * 1.5em);
 }
 .em.em-flag-south-africa {
-  background-position: -2448px -1728px;
+	background-position: calc(-34 * 1.5em) calc(-24 * 1.5em);
 }
