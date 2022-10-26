@@ -16,7 +16,7 @@ export default class EmojiEditing extends Plugin {
 		this._defineConverters();
 		this.editor.editing.mapper.on(
 			'viewToModelPosition',
-			viewToModelPositionOutsideModelElement( this.editor.model, viewElement => viewElement.hasClass( 'em' ) )
+			viewToModelPositionOutsideModelElement( this.editor.model, viewElement => viewElement.hasAttribute( 'emoji' ) )
 		);
 	}
 
@@ -24,9 +24,8 @@ export default class EmojiEditing extends Plugin {
 		const schema = this.editor.model.schema;
 
 		schema.register( 'emoji', {
-			inheritAllFrom: '$inlineObject',
-			allowAttributes: [ 'emojiName' ],
-			isObject: true
+			inheritAllFrom: '$text',
+			allowAttributes: [ 'emojiName' ]
 		} );
 	}
 
@@ -36,12 +35,16 @@ export default class EmojiEditing extends Plugin {
 		const createEmojiElement = ( element: Element, writer: DowncastWriter ) => {
 			const emojiName = String( element.getAttribute( 'emojiName' ) );
 
-			return writer.createEmptyElement( 'emoji', {
-				class: `${ EMOJI_CLASS_PREFIX }${ emojiName }`
+			const emoji = writer.createContainerElement( 'emoji', {
+				class: `${ EMOJI_CLASS_PREFIX }${ emojiName }`,
+				emoji: emojiName // for viewToModelPositionOutsideModelElement
 			} );
+			const innerText = writer.createText( ':' + emojiName + ':' );
+			writer.insert( writer.createPositionAt( emoji, 0 ), innerText );
+			return emoji;
 		};
 
-		conversion.for( 'downcast' ).elementToElement( {
+		conversion.for( 'dataDowncast' ).elementToElement( {
 			model: 'emoji',
 			view: ( element, conversionApi ) => {
 				return createEmojiElement( element, conversionApi.writer );

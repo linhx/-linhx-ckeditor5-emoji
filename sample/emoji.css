@@ -7,7 +7,7 @@
 
 .emoji.emoji-grid__tiles > .em,
 .ck-editor__main .em {
-	background-image: url("/emojis.png");
+	background-image: url("./emojis.png");
 	background-repeat: no-repeat;
 	display: inline-block;
 }
@@ -22,6 +22,9 @@
 		auto;
 	vertical-align: middle;
 	margin-top: -4px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .em.em-grinning-face {

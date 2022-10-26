@@ -24,7 +24,8 @@ export default class EmojiGridView extends View {
 					attributes: {
 						class: [
 							'emoji',
-							'emoji-grid__tiles'
+							'emoji-grid__tiles',
+							'ck-reset_all-excluded'
 						]
 					},
 					children: this.tiles
@@ -47,17 +48,29 @@ export default class EmojiGridView extends View {
 		this.focusTracker = new FocusTracker();
 	}
 
-	public createTile( character: string, name: string ): ButtonView {
+	public createTile( character: string, name: string ): View {
 		const tile = new ButtonView( this.locale );
 
-		tile.set( {
-			label: character,
-			class: `${ EMOJI_CLASS_PREFIX }${ name }`
-		} );
-
-		tile.extendTemplate( {
+		const bind = tile.bindTemplate;
+		tile.setTemplate( {
+			tag: 'button',
 			attributes: {
-				title: name
+				label: character,
+				title: name,
+				class: `em-grid-item ${ EMOJI_CLASS_PREFIX }${ name }`
+			},
+			on: {
+				mousedown: bind.to( evt => {
+					evt.preventDefault();
+				} ),
+
+				click: bind.to( evt => {
+					if ( tile.isEnabled ) {
+						tile.fire( 'execute' );
+					} else {
+						evt.preventDefault();
+					}
+				} )
 			}
 		} );
 
@@ -72,7 +85,7 @@ export default class EmojiGridView extends View {
 		this.tiles.clear();
 	}
 
-	public addTitle( title: ButtonView ): void {
+	public addTitle( title: View ): void {
 		this.tiles.add( title );
 	}
 }

@@ -26,4 +26,10 @@
 		auto;
 	padding: 0;
 	border: 0;
+	background-color: unset;
+	cursor: pointer;
+}
+
+.emoji.emoji-grid__tiles > .em:hover {
+	background-color: antiquewhite;
 }

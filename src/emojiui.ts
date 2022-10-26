@@ -40,6 +40,11 @@ export default class EmojiUI extends Plugin {
 					const imageElement = writer.createElement( 'emoji', {
 						emojiName: data.name
 					} );
+					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+					// @ts-ignore: avoid error when emoji place at the end of code block,
+					// can't move the cursor there because of missing element data
+					// TODO find better way
+					imageElement.data = data.name;
 					model.insertContent(
 						imageElement
 					);
