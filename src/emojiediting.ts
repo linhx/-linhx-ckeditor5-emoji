@@ -3,8 +3,6 @@ import { Widget, toWidget, viewToModelPositionOutsideModelElement } from 'ckedit
 import { Plugin, type Editor } from 'ckeditor5/src/core';
 import { ATTR_NAME, EMOJI_CLASS, getClassesPrefix, HTML_TAG_NAME, SCHEMA_NAME } from './constants';
 
-const ATTR_FOR_VIEW_ELEMENT_MATCHER = 'emoji';
-
 export default class EmojiEditing extends Plugin {
 	private classEmoji: string;
 	private classPrefix: string;
@@ -66,8 +64,7 @@ export default class EmojiEditing extends Plugin {
 			const emojiName = String( element.getAttribute( ATTR_NAME ) );
 
 			const emoji = writer.createContainerElement( HTML_TAG_NAME, {
-				class: `${ this.classesPrefix }${ emojiName }`,
-				[ ATTR_FOR_VIEW_ELEMENT_MATCHER ]: emojiName // for viewToModelPositionOutsideModelElement
+				class: `${ this.classesPrefix }${ emojiName }`
 			} );
 			const innerText = writer.createText( ':' + emojiName + ':' );
 			writer.insert( writer.createPositionAt( emoji, 0 ), innerText );
