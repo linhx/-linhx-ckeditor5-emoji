@@ -16,8 +16,8 @@ npm i @linhx/ckeditor5-emoji
 
 ## TODO
 
-- [] single image emoji
-- [] add tests
+- [ ] single image emoji
+- [ ] add tests
 
 ======================
 
