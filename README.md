@@ -1,10 +1,8 @@
 # @linhx/ckeditor5-emoji
 
-======================
+Inserting custom emoji from Image Sprites.
 
 ![img](./ckeditor5-emoji.png)
-
-Inserting custom emoji from Image Sprites.
 
 ## Usage
 

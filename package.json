@@ -1,11 +1,15 @@
 {
   "name": "@linhx/ckeditor5-emoji",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Inserting custom emoji to CKEditor 5.",
   "author": {
     "name": "linhx",
     "email": "nguyendinhlinhx@gmail.com",
     "url": "https://profile.linhx.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linhx/ckeditor5-emoji.git"
   },
   "keywords": [
     "ckeditor",
@@ -14,7 +18,8 @@
     "ckeditor5-feature",
     "ckeditor5-plugin",
     "ckeditor5-dll",
-    "ckeditor5-package-generator"
+    "ckeditor5-package-generator",
+    "ckeditor5-emoji"
   ],
   "main": "src/index.ts",
   "license": "MIT",
