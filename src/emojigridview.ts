@@ -6,6 +6,7 @@ import {
 } from 'ckeditor5/src/ui';
 
 import '../theme/emoji-grid.css';
+import { type Emoji } from './constants';
 
 export default class EmojiGridView extends View {
 	private tiles: ViewCollection<View>;
@@ -49,16 +50,15 @@ export default class EmojiGridView extends View {
 		this.focusTracker = new FocusTracker();
 	}
 
-	public createTile( character: string, name: string ): View {
+	public createTile( key: string, name?: string ): View {
 		const tile = new ButtonView( this.locale );
 
 		const bind = tile.bindTemplate;
 		tile.setTemplate( {
 			tag: 'button',
 			attributes: {
-				label: character,
-				title: name,
-				class: `em-grid-item ${ this.classesPrefix }${ name }`
+				title: name || '',
+				class: `em-grid-item ${ this.classesPrefix }${ key }`
 			},
 			on: {
 				mousedown: bind.to( evt => {
@@ -76,7 +76,7 @@ export default class EmojiGridView extends View {
 		} );
 
 		tile.on( 'execute', () => {
-			this.fire( 'execute', { name, character } );
+			this.fire( 'execute', { key, name } as Emoji );
 		} );
 
 		return tile;

@@ -6,7 +6,15 @@ import ckeditor5Icon from '../theme/icons/grining.svg';
 import EmojiGridView from './emojigridview';
 import EmojiNavigationView from './emojinavigationview';
 import EmojisView from './emojisview';
-import { ALL_EMOJI_GROUPS, ALL_EMOJI_KEYS, ATTR_NAME, DEFAULT_GROUP, EMOJI_CLASS, getClassesPrefix, SCHEMA_NAME } from './constants';
+import {
+	ALL_EMOJI_GROUPS,
+	ATTR_EMOJI_KEY,
+	DEFAULT_GROUP,
+	type Emoji,
+	EMOJI_CLASS,
+	getClassesPrefix,
+	SCHEMA_NAME
+} from './constants';
 
 export default class EmojiUI extends Plugin {
 	private classEmoji: string;
@@ -15,12 +23,10 @@ export default class EmojiUI extends Plugin {
 	public static override get pluginName(): string {
 		return 'EmojiUI';
 	}
-	private _characters: Map<string, string>;
-	private _groups: Map<string, Array<string>>;
+	private _groups: Map<string, Array<Emoji>>;
 
 	constructor( editor: Editor ) {
 		super( editor );
-		this._characters = this.editor.config.get( 'emoji.characters' ) || ALL_EMOJI_KEYS;
 		this._groups = this.editor.config.get( 'emoji.groups' ) || ALL_EMOJI_GROUPS;
 		this.classEmoji = this.editor.config.get( 'emoji.class' ) || EMOJI_CLASS;
 		this.classesPrefix = getClassesPrefix( this.classEmoji );
@@ -40,16 +46,16 @@ export default class EmojiUI extends Plugin {
 				icon: ckeditor5Icon
 			} );
 
-			dropdownView.on( 'execute', ( evt, data ) => {
+			dropdownView.on( 'execute', ( evt, data: Emoji ) => {
 				model.change( writer => {
 					const imageElement = writer.createElement( SCHEMA_NAME, {
-						[ ATTR_NAME ]: data.name
+						[ ATTR_EMOJI_KEY ]: data.key
 					} );
 					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 					// @ts-ignore: avoid error when emoji place at the end of code block,
 					// can't move the cursor there because of missing element data
 					// TODO find better way
-					imageElement.data = data.name;
+					imageElement.data = data.key;
 					model.insertContent(
 						imageElement
 					);
@@ -83,24 +89,18 @@ export default class EmojiUI extends Plugin {
 		return this._groups.get( groupName );
 	}
 
-	private getEmoji( name: string ) {
-		return this._characters.get( name );
-	}
-
 	private _updateGrid( currentGroupName: string, gridView: EmojiGridView ) {
 		gridView.clearTitles();
 
-		const characterTitles = this.getEmojisForGroup( currentGroupName );
+		const emojiDatas = this.getEmojisForGroup( currentGroupName );
 
-		if ( !characterTitles ) {
+		if ( !emojiDatas ) {
+			console.warn( 'emoji does not exist' );
 			return;
 		}
 
-		for ( const name of characterTitles ) {
-			const character = this.getEmoji( name );
-			if ( character ) {
-				gridView.addTitle( gridView.createTile( character, name ) );
-			}
+		for ( const emojiData of emojiDatas ) {
+			gridView.addTitle( gridView.createTile( emojiData.key, emojiData.name ) );
 		}
 	}
 

@@ -1,9 +1,10 @@
 import { type Element, type DowncastWriter } from 'ckeditor5/src/engine';
 import { Widget, toWidget, viewToModelPositionOutsideModelElement } from 'ckeditor5/src/widget';
 import { Plugin, type Editor } from 'ckeditor5/src/core';
-import { ATTR_NAME, EMOJI_CLASS, getClassesPrefix, HTML_TAG_NAME, SCHEMA_NAME } from './constants';
+import { ATTR_EMOJI_KEY, EMOJI_CLASS, getClassesPrefix, HTML_TAG_NAME, SCHEMA_NAME } from './constants';
 
 export default class EmojiEditing extends Plugin {
+	private tagName: string;
 	private classEmoji: string;
 	private classPrefix: string;
 	private classesPrefix: string;
@@ -17,6 +18,7 @@ export default class EmojiEditing extends Plugin {
 
 	public constructor( editor: Editor ) {
 		super( editor );
+		this.tagName = this.editor.config.get( 'emoji.tag' ) || HTML_TAG_NAME;
 		this.classEmoji = this.editor.config.get( 'emoji.class' ) || EMOJI_CLASS;
 		this.classPrefix = `${ this.classEmoji }-`;
 		this.classesPrefix = getClassesPrefix( this.classEmoji );
@@ -53,7 +55,7 @@ export default class EmojiEditing extends Plugin {
 
 		schema.register( SCHEMA_NAME, {
 			inheritAllFrom: '$text',
-			allowAttributes: [ ATTR_NAME ]
+			allowAttributes: [ ATTR_EMOJI_KEY ]
 		} );
 	}
 
@@ -61,12 +63,12 @@ export default class EmojiEditing extends Plugin {
 		const conversion = this.editor.conversion;
 
 		const createEmojiElement = ( element: Element, writer: DowncastWriter ) => {
-			const emojiName = String( element.getAttribute( ATTR_NAME ) );
+			const emojiKey = String( element.getAttribute( ATTR_EMOJI_KEY ) );
 
-			const emoji = writer.createContainerElement( HTML_TAG_NAME, {
-				class: `${ this.classesPrefix }${ emojiName }`
+			const emoji = writer.createContainerElement( this.tagName, {
+				class: `${ this.classesPrefix }${ emojiKey }`
 			} );
-			const innerText = writer.createText( ':' + emojiName + ':' );
+			const innerText = writer.createText( ':' + emojiKey + ':' );
 			writer.insert( writer.createPositionAt( emoji, 0 ), innerText );
 			return emoji;
 		};
@@ -88,7 +90,7 @@ export default class EmojiEditing extends Plugin {
 
 		conversion.for( 'upcast' ).elementToElement( {
 			view: {
-				name: HTML_TAG_NAME,
+				name: this.tagName,
 				classes: [ this.classEmoji ]
 			},
 			model: ( viewElement, { writer: modelWriter } ) => {
@@ -96,15 +98,15 @@ export default class EmojiEditing extends Plugin {
 
 				for ( const clazz of classes ) {
 					if ( clazz.startsWith( this.classPrefix ) ) {
-						const emojiName = clazz.substring( this.classPrefix.length );
+						const emojiKey = clazz.substring( this.classPrefix.length );
 						const emojiElement = modelWriter.createElement( SCHEMA_NAME, {
-							[ ATTR_NAME ]: emojiName
+							[ ATTR_EMOJI_KEY ]: emojiKey
 						} );
 						// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 						// @ts-ignore: avoid error when emoji place at the end of code block,
 						// can't move the cursor there because of missing element data
 						// TODO find better way
-						emojiElement.data = emojiName;
+						emojiElement.data = emojiKey;
 						return emojiElement;
 					}
 				}

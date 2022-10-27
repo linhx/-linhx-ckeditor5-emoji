@@ -22,6 +22,24 @@ import '@linhx/ckeditor5-emoji/theme/emoji.css';
 
 Copy `@linhx/ckeditor5-emoji/theme/emojis.png` to your public assets folder, so that the emoji sprite can be accessed through `yourdomain.com/emojis.png`. If not, you have to modify the css file `@linhx/ckeditor5-emoji/theme/emoji.css` to specify the emoji sprite url.
 
+### Custom your Emoji sprite
+
+If you want to use your Emoji sprite:
+
+1. Config plugin
+
+    ```javascript
+    {
+        emoji: {
+            tag: string, // your html tag name of emoji element
+            class: string, // your prefix css class of emoji, default is "em"
+            groups: Map<string, Array<{key: string, name?: string}>>, // Map of groups of emojis, e.g. { people: [{ key: 'grinning', name: 'Grinning' }] }, the emoji keys should be matching with your css classes.
+        }
+    }
+    ```
+
+2. Write your emoji CSS file, check `theme/emoji.css` for more information.
+
 ## TODO
 
 - [ ] single image emoji

@@ -1,4 +1,4 @@
-import { type Locale, FocusTracker } from 'ckeditor5/src/utils';
+import { type Locale } from 'ckeditor5/src/utils';
 import {
 	View,
 	ButtonView
