@@ -81,9 +81,16 @@ export default class EmojiEditing extends Plugin {
 
 				for ( const clazz of classes ) {
 					if ( clazz.startsWith( this.classPrefix ) ) {
-						return modelWriter.createElement( SCHEMA_NAME, {
-							[ ATTR_NAME ]: clazz.substring( this.classPrefix.length )
+						const emojiName = clazz.substring( this.classPrefix.length );
+						const emojiElement = modelWriter.createElement( SCHEMA_NAME, {
+							[ ATTR_NAME ]: emojiName
 						} );
+						// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+						// @ts-ignore: avoid error when emoji place at the end of code block,
+						// can't move the cursor there because of missing element data
+						// TODO find better way
+						emojiElement.data = emojiName;
+						return emojiElement;
 					}
 				}
 				return null;
