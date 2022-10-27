@@ -10,7 +10,26 @@ Inserting custom emoji from Image Sprites.
 npm i @linhx/ckeditor5-emoji
 ```
 
-[Installing plugins](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/installing-plugins.html)
+Read [Installing plugins](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/installing-plugins.html)
+
+Add to toolbar
+
+```
+    toolbar: {
+
+        items: [
+
+            ...
+
+            'emoji',
+
+            ...
+
+        ]
+
+    },
+```
+
 
 ### Style and Emoji sprite
 
