@@ -1,13 +1,14 @@
 import { type Element, type DowncastWriter } from 'ckeditor5/src/engine';
 import { Widget, toWidget, viewToModelPositionOutsideModelElement } from 'ckeditor5/src/widget';
 import { Plugin, type Editor } from 'ckeditor5/src/core';
-import { ATTR_NAME, EMOJI_CLASSES_PREFIX, EMOJI_CLASS_PREFIX, HTML_TAG_NAME, SCHEMA_NAME } from './constants';
+import { ATTR_NAME, EMOJI_CLASS, getClassesPrefix, HTML_TAG_NAME, SCHEMA_NAME } from './constants';
 
 const ATTR_FOR_VIEW_ELEMENT_MATCHER = 'emoji';
 
 export default class EmojiEditing extends Plugin {
-	private classesPrefix: string;
+	private classEmoji: string;
 	private classPrefix: string;
+	private classesPrefix: string;
 
 	public static override get requires(): Array<typeof Plugin> {
 		return [ Widget ];
@@ -18,8 +19,9 @@ export default class EmojiEditing extends Plugin {
 
 	public constructor( editor: Editor ) {
 		super( editor );
-		this.classesPrefix = EMOJI_CLASSES_PREFIX || this.editor.config.get( 'emoji.classesPrefix' );
-		this.classPrefix = EMOJI_CLASS_PREFIX || this.editor.config.get( 'emoji.classPrefix' );
+		this.classEmoji = this.editor.config.get( 'emoji.class' ) || EMOJI_CLASS;
+		this.classPrefix = `${ this.classEmoji }-`;
+		this.classesPrefix = getClassesPrefix( this.classEmoji );
 	}
 
 	public override init(): void {
@@ -28,7 +30,23 @@ export default class EmojiEditing extends Plugin {
 		this.editor.editing.mapper.on(
 			'viewToModelPosition',
 			viewToModelPositionOutsideModelElement( this.editor.model,
-				viewElement => viewElement.hasAttribute( ATTR_FOR_VIEW_ELEMENT_MATCHER ) )
+				viewElement => {
+					const classes = viewElement.getClassNames();
+					let hasClassEm = false;
+					let hasClassPrefix = false;
+					for ( const clazz of classes ) {
+						if ( clazz === this.classEmoji ) {
+							hasClassEm = true;
+						}
+						if ( clazz.startsWith( this.classPrefix ) ) {
+							hasClassPrefix = true;
+						}
+						if ( hasClassEm && hasClassPrefix ) {
+							return true;
+						}
+					}
+					return false;
+				} )
 		);
 	}
 
@@ -74,7 +92,7 @@ export default class EmojiEditing extends Plugin {
 		conversion.for( 'upcast' ).elementToElement( {
 			view: {
 				name: HTML_TAG_NAME,
-				classes: [ 'em' ]
+				classes: [ this.classEmoji ]
 			},
 			model: ( viewElement, { writer: modelWriter } ) => {
 				const classes = viewElement.getClassNames();

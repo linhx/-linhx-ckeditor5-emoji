@@ -4,17 +4,18 @@ import {
 	type ViewCollection,
 	ButtonView
 } from 'ckeditor5/src/ui';
-import { EMOJI_CLASSES_PREFIX } from './constants';
 
 import '../theme/emoji-grid.css';
 
 export default class EmojiGridView extends View {
 	private tiles: ViewCollection<View>;
 	private focusTracker: FocusTracker;
+	private classesPrefix: string;
 
-	constructor( locale: Locale ) {
+	constructor( locale: Locale, classesPrefix: string ) {
 		super( locale );
 		this.tiles = this.createCollection();
+		this.classesPrefix = classesPrefix;
 
 		this.setTemplate( {
 			tag: 'div',
@@ -57,7 +58,7 @@ export default class EmojiGridView extends View {
 			attributes: {
 				label: character,
 				title: name,
-				class: `em-grid-item ${ EMOJI_CLASSES_PREFIX }${ name }`
+				class: `em-grid-item ${ this.classesPrefix }${ name }`
 			},
 			on: {
 				mousedown: bind.to( evt => {

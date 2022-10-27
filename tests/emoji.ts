@@ -50,14 +50,14 @@ describe( 'Emoji', () => {
 			expect( editor.ui.componentFactory.has( 'emoji' ) ).to.equal( true );
 		} );
 
-		it( 'should add a text into the editor after clicking the icon', () => {
+		it( 'should add a emoji into the editor after clicking the emoji icon', () => {
 			const icon = editor.ui.componentFactory.create( 'emoji' );
 
 			expect( editor.getData() ).to.equal( '' );
 
-			icon.fire( 'execute' );
+			icon.fire( 'execute', { name: 'grinning' } );
 
-			expect( editor.getData() ).to.equal( '<p>Hello CKEditor 5!</p>' );
+			expect( editor.getData() ).to.equal( '<p><emoji class="em em-grinning" emoji="grinning">:grinning:</emoji></p>' );
 		} );
 	} );
 } );

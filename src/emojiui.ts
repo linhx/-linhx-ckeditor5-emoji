@@ -6,9 +6,12 @@ import ckeditor5Icon from '../theme/icons/grining.svg';
 import EmojiGridView from './emojigridview';
 import EmojiNavigationView from './emojinavigationview';
 import EmojisView from './emojisview';
-import { ALL_EMOJI_GROUPS, ALL_EMOJI_KEYS, ATTR_NAME, DEFAULT_GROUP, SCHEMA_NAME } from './constants';
+import { ALL_EMOJI_GROUPS, ALL_EMOJI_KEYS, ATTR_NAME, DEFAULT_GROUP, EMOJI_CLASS, getClassesPrefix, SCHEMA_NAME } from './constants';
 
 export default class EmojiUI extends Plugin {
+	private classEmoji: string;
+	private classesPrefix: string;
+
 	public static override get pluginName(): string {
 		return 'EmojiUI';
 	}
@@ -19,6 +22,8 @@ export default class EmojiUI extends Plugin {
 		super( editor );
 		this._characters = this.editor.config.get( 'emoji.characters' ) || ALL_EMOJI_KEYS;
 		this._groups = this.editor.config.get( 'emoji.groups' ) || ALL_EMOJI_GROUPS;
+		this.classEmoji = this.editor.config.get( 'emoji.class' ) || EMOJI_CLASS;
+		this.classesPrefix = getClassesPrefix( this.classEmoji );
 	}
 
 	public override init(): void {
@@ -105,7 +110,7 @@ export default class EmojiUI extends Plugin {
 		const initGroup = DEFAULT_GROUP;
 
 		const navigationView = new EmojiNavigationView( locale, emojiGroups, initGroup );
-		const gridView = new EmojiGridView( locale );
+		const gridView = new EmojiGridView( locale, this.classesPrefix );
 
 		gridView.delegate( 'execute' ).to( dropdownView );
 

@@ -22,8 +22,11 @@ emojisList.forEach( emoji => {
 export const ALL_EMOJI_GROUPS = _ALL_EMOJI_GROUPS;
 export const ALL_EMOJI_KEYS = _ALL_EMOJI_KEYS;
 
-export const EMOJI_CLASS_PREFIX = 'em-';
-export const EMOJI_CLASSES_PREFIX = 'em em-';
+export const EMOJI_CLASS = 'em';
 export const HTML_TAG_NAME = 'emoji';
 export const SCHEMA_NAME = 'emoji';
 export const ATTR_NAME = 'emojiName';
+
+export const getClassesPrefix = ( classEmoji: string ): string => {
+	return `${ classEmoji } ${ classEmoji }-`;
+};
