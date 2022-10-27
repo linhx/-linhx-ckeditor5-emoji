@@ -1,10 +1,10 @@
-@linhx/ckeditor5-emoji
+# @linhx/ckeditor5-emoji
+
 ======================
 
 ![img](./ckeditor5-emoji.png)
 
-
-Inserting custom emoji by using spritesheet image.
+Inserting custom emoji from Image Sprites.
 
 ## Usage
 
@@ -13,6 +13,14 @@ npm i @linhx/ckeditor5-emoji
 ```
 
 [Installing plugins](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/installing-plugins.html)
+
+### Style and Emoji sprite
+
+```javascript
+import '@linhx/ckeditor5-emoji/theme/emoji.css';
+```
+
+Copy `@linhx/ckeditor5-emoji/theme/emojis.png` to your public assets folder, so that the emoji sprite can be accessed through `yourdomain.com/emojis.png`. If not, you have to modify the css file `@linhx/ckeditor5-emoji/theme/emoji.css` to specify the emoji sprite url.
 
 ## TODO
 
