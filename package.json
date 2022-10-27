@@ -1,7 +1,12 @@
 {
   "name": "@linhx/ckeditor5-emoji",
-  "version": "0.0.3",
-  "description": "A plugin for CKEditor 5.",
+  "version": "0.0.4",
+  "description": "Inserting custom emoji to CKEditor 5.",
+  "author": {
+    "name": "linhx",
+    "email": "nguyendinhlinhx@gmail.com",
+    "url": "https://profile.linhx.com/"
+  },
   "keywords": [
     "ckeditor",
     "ckeditor5",

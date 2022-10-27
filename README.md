@@ -1,6 +1,26 @@
 @linhx/ckeditor5-emoji
 ======================
 
+![img](./ckeditor5-emoji.png)
+
+
+Inserting custom emoji by using spritesheet image.
+
+## Usage
+
+```shell
+npm i @linhx/ckeditor5-emoji
+```
+
+[Installing plugins](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/installing-plugins.html)
+
+## TODO
+
+- [] single image emoji
+- [] add tests
+
+======================
+
 This package was created by the [ckeditor5-package-generator](https://www.npmjs.com/package/ckeditor5-package-generator) package.
 
 ## Table of contents
