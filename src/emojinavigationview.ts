@@ -47,4 +47,8 @@ export default class EmojiNavigationView extends View {
 			selectedGroup
 		} );
 	}
+
+	public focus(): void {
+		//
+	}
 }

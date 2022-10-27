@@ -353,17 +353,17 @@ export const emojisList = [
 		key: 'angry-face-with-horns',
 		group: 'people'
 	},
-	{ index: 60, name: 'Skull', key: 'skull', group: 'people', skinTone: '' },
+	{ index: 60, name: 'Skull', key: 'skull', group: 'people' },
 	{
 		index: 61,
 		name: 'Pile of Poo',
 		key: 'pile-of-poo',
 		group: 'people'
 	},
-	{ index: 62, name: 'Ogre', key: 'ogre', group: 'people', skinTone: '' },
-	{ index: 63, name: 'Goblin', key: 'goblin', group: 'people', skinTone: '' },
-	{ index: 64, name: 'Ghost', key: 'ghost', group: 'people', skinTone: '' },
-	{ index: 65, name: 'Alien', key: 'alien', group: 'people', skinTone: '' },
+	{ index: 62, name: 'Ogre', key: 'ogre', group: 'people' },
+	{ index: 63, name: 'Goblin', key: 'goblin', group: 'people' },
+	{ index: 64, name: 'Ghost', key: 'ghost', group: 'people' },
+	{ index: 65, name: 'Alien', key: 'alien', group: 'people' },
 	{
 		index: 66,
 		name: 'Alien Monster',
@@ -556,7 +556,7 @@ export const emojisList = [
 		key: 'collision',
 		group: 'nature'
 	},
-	{ index: 98, name: 'Dizzy', key: 'dizzy', group: 'nature', skinTone: '' },
+	{ index: 98, name: 'Dizzy', key: 'dizzy', group: 'nature' },
 	{
 		index: 99,
 		name: 'Sweat Droplets',
@@ -569,7 +569,7 @@ export const emojisList = [
 		key: 'dashing-away',
 		group: 'nature'
 	},
-	{ index: 101, name: 'Bomb', key: 'bomb', group: 'objects', skinTone: '' },
+	{ index: 101, name: 'Bomb', key: 'bomb', group: 'objects' },
 	{
 		index: 102,
 		name: 'Speech Balloon',
@@ -582,7 +582,7 @@ export const emojisList = [
 		key: 'thought-balloon',
 		group: 'symbols'
 	},
-	{ index: 104, name: 'Zzz', key: 'zzz', group: 'symbols', skinTone: '' },
+	{ index: 104, name: 'Zzz', key: 'zzz', group: 'symbols' },
 	{
 		index: 105,
 		name: 'Waving Hand',
@@ -1362,7 +1362,7 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 219, name: 'Ear', key: 'ear', group: 'people', skinTone: '' },
+	{ index: 219, name: 'Ear', key: 'ear', group: 'people' },
 	{
 		index: 220,
 		name: 'Ear: Light Skin Tone',
@@ -1398,7 +1398,7 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 225, name: 'Nose', key: 'nose', group: 'people', skinTone: '' },
+	{ index: 225, name: 'Nose', key: 'nose', group: 'people' },
 	{
 		index: 226,
 		name: 'Nose: Light Skin Tone',
@@ -1434,15 +1434,15 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 231, name: 'Eyes', key: 'eyes', group: 'people', skinTone: '' },
+	{ index: 231, name: 'Eyes', key: 'eyes', group: 'people' },
 	{
 		index: 232,
 		name: 'Tongue',
 		key: 'tongue',
 		group: 'people'
 	},
-	{ index: 233, name: 'Mouth', key: 'mouth', group: 'people', skinTone: '' },
-	{ index: 234, name: 'Baby', key: 'baby', group: 'people', skinTone: '' },
+	{ index: 233, name: 'Mouth', key: 'mouth', group: 'people' },
+	{ index: 234, name: 'Baby', key: 'baby', group: 'people' },
 	{
 		index: 235,
 		name: 'Baby: Light Skin Tone',
@@ -1478,7 +1478,7 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 240, name: 'Boy', key: 'boy', group: 'people', skinTone: '' },
+	{ index: 240, name: 'Boy', key: 'boy', group: 'people' },
 	{
 		index: 241,
 		name: 'Boy: Light Skin Tone',
@@ -1514,7 +1514,7 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 246, name: 'Girl', key: 'girl', group: 'people', skinTone: '' },
+	{ index: 246, name: 'Girl', key: 'girl', group: 'people' },
 	{
 		index: 247,
 		name: 'Girl: Light Skin Tone',
@@ -1591,7 +1591,7 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 258, name: 'Man', key: 'man', group: 'people', skinTone: '' },
+	{ index: 258, name: 'Man', key: 'man', group: 'people' },
 	{
 		index: 259,
 		name: 'Man: Light Skin Tone',
@@ -1627,7 +1627,7 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 264, name: 'Woman', key: 'woman', group: 'people', skinTone: '' },
+	{ index: 264, name: 'Woman', key: 'woman', group: 'people' },
 	{
 		index: 265,
 		name: 'Woman: Light Skin Tone',
@@ -2073,7 +2073,7 @@ export const emojisList = [
 		group: 'people',
 		skinTone: 'dark'
 	},
-	{ index: 330, name: 'Guard', key: 'guard', group: 'people', skinTone: '' },
+	{ index: 330, name: 'Guard', key: 'guard', group: 'people' },
 	{
 		index: 331,
 		name: 'Guard: Light Skin Tone',
@@ -2918,7 +2918,7 @@ export const emojisList = [
 		key: 'men-holding-hands',
 		group: 'people'
 	},
-	{ index: 455, name: 'Kiss', key: 'kiss', group: 'people', skinTone: '' },
+	{ index: 455, name: 'Kiss', key: 'kiss', group: 'people' },
 	{
 		index: 456,
 		name: 'Kiss: Man, Man',
@@ -3075,28 +3075,28 @@ export const emojisList = [
 		key: 'dog-face',
 		group: 'nature'
 	},
-	{ index: 482, name: 'Dog', key: 'dog', group: 'nature', skinTone: '' },
+	{ index: 482, name: 'Dog', key: 'dog', group: 'nature' },
 	{
 		index: 483,
 		name: 'Poodle',
 		key: 'poodle',
 		group: 'nature'
 	},
-	{ index: 484, name: 'Wolf', key: 'wolf', group: 'nature', skinTone: '' },
+	{ index: 484, name: 'Wolf', key: 'wolf', group: 'nature' },
 	{
 		index: 485,
 		name: 'Cat Face',
 		key: 'cat-face',
 		group: 'nature'
 	},
-	{ index: 486, name: 'Cat', key: 'cat', group: 'nature', skinTone: '' },
+	{ index: 486, name: 'Cat', key: 'cat', group: 'nature' },
 	{
 		index: 487,
 		name: 'Tiger Face',
 		key: 'tiger-face',
 		group: 'nature'
 	},
-	{ index: 488, name: 'Tiger', key: 'tiger', group: 'nature', skinTone: '' },
+	{ index: 488, name: 'Tiger', key: 'tiger', group: 'nature' },
 	{
 		index: 489,
 		name: 'Leopard',
@@ -3109,39 +3109,39 @@ export const emojisList = [
 		key: 'horse-face',
 		group: 'nature'
 	},
-	{ index: 491, name: 'Horse', key: 'horse', group: 'nature', skinTone: '' },
+	{ index: 491, name: 'Horse', key: 'horse', group: 'nature' },
 	{
 		index: 492,
 		name: 'Cow Face',
 		key: 'cow-face',
 		group: 'nature'
 	},
-	{ index: 493, name: 'Ox', key: 'ox', group: 'nature', skinTone: '' },
+	{ index: 493, name: 'Ox', key: 'ox', group: 'nature' },
 	{
 		index: 494,
 		name: 'Water Buffalo',
 		key: 'water-buffalo',
 		group: 'nature'
 	},
-	{ index: 495, name: 'Cow', key: 'cow', group: 'nature', skinTone: '' },
+	{ index: 495, name: 'Cow', key: 'cow', group: 'nature' },
 	{
 		index: 496,
 		name: 'Pig Face',
 		key: 'pig-face',
 		group: 'nature'
 	},
-	{ index: 497, name: 'Pig', key: 'pig', group: 'nature', skinTone: '' },
-	{ index: 498, name: 'Boar', key: 'boar', group: 'nature', skinTone: '' },
+	{ index: 497, name: 'Pig', key: 'pig', group: 'nature' },
+	{ index: 498, name: 'Boar', key: 'boar', group: 'nature' },
 	{
 		index: 499,
 		name: 'Pig Nose',
 		key: 'pig-nose',
 		group: 'nature'
 	},
-	{ index: 500, name: 'Ram', key: 'ram', group: 'nature', skinTone: '' },
-	{ index: 501, name: 'Ewe', key: 'ewe', group: 'nature', skinTone: '' },
-	{ index: 502, name: 'Goat', key: 'goat', group: 'nature', skinTone: '' },
-	{ index: 503, name: 'Camel', key: 'camel', group: 'nature', skinTone: '' },
+	{ index: 500, name: 'Ram', key: 'ram', group: 'nature' },
+	{ index: 501, name: 'Ewe', key: 'ewe', group: 'nature' },
+	{ index: 502, name: 'Goat', key: 'goat', group: 'nature' },
+	{ index: 503, name: 'Camel', key: 'camel', group: 'nature' },
 	{
 		index: 504,
 		name: 'Two-Hump Camel',
@@ -3160,8 +3160,8 @@ export const emojisList = [
 		key: 'mouse-face',
 		group: 'nature'
 	},
-	{ index: 507, name: 'Mouse', key: 'mouse', group: 'nature', skinTone: '' },
-	{ index: 508, name: 'Rat', key: 'rat', group: 'nature', skinTone: '' },
+	{ index: 507, name: 'Mouse', key: 'mouse', group: 'nature' },
+	{ index: 508, name: 'Rat', key: 'rat', group: 'nature' },
 	{
 		index: 509,
 		name: 'Hamster',
@@ -3180,9 +3180,9 @@ export const emojisList = [
 		key: 'rabbit',
 		group: 'nature'
 	},
-	{ index: 512, name: 'Bear', key: 'bear', group: 'nature', skinTone: '' },
-	{ index: 513, name: 'Koala', key: 'koala', group: 'nature', skinTone: '' },
-	{ index: 514, name: 'Panda', key: 'panda', group: 'nature', skinTone: '' },
+	{ index: 512, name: 'Bear', key: 'bear', group: 'nature' },
+	{ index: 513, name: 'Koala', key: 'koala', group: 'nature' },
+	{ index: 514, name: 'Panda', key: 'panda', group: 'nature' },
 	{
 		index: 515,
 		name: 'Paw Prints',
@@ -3219,14 +3219,14 @@ export const emojisList = [
 		key: 'front-facing-baby-chick',
 		group: 'nature'
 	},
-	{ index: 521, name: 'Bird', key: 'bird', group: 'nature', skinTone: '' },
+	{ index: 521, name: 'Bird', key: 'bird', group: 'nature' },
 	{
 		index: 522,
 		name: 'Penguin',
 		key: 'penguin',
 		group: 'nature'
 	},
-	{ index: 523, name: 'Frog', key: 'frog', group: 'nature', skinTone: '' },
+	{ index: 523, name: 'Frog', key: 'frog', group: 'nature' },
 	{
 		index: 524,
 		name: 'Crocodile',
@@ -3239,7 +3239,7 @@ export const emojisList = [
 		key: 'turtle',
 		group: 'nature'
 	},
-	{ index: 526, name: 'Snake', key: 'snake', group: 'nature', skinTone: '' },
+	{ index: 526, name: 'Snake', key: 'snake', group: 'nature' },
 	{
 		index: 527,
 		name: 'Dragon Face',
@@ -3258,14 +3258,14 @@ export const emojisList = [
 		key: 'spouting-whale',
 		group: 'nature'
 	},
-	{ index: 530, name: 'Whale', key: 'whale', group: 'nature', skinTone: '' },
+	{ index: 530, name: 'Whale', key: 'whale', group: 'nature' },
 	{
 		index: 531,
 		name: 'Dolphin',
 		key: 'dolphin',
 		group: 'nature'
 	},
-	{ index: 532, name: 'Fish', key: 'fish', group: 'nature', skinTone: '' },
+	{ index: 532, name: 'Fish', key: 'fish', group: 'nature' },
 	{
 		index: 533,
 		name: 'Tropical Fish',
@@ -3290,9 +3290,9 @@ export const emojisList = [
 		key: 'spiral-shell',
 		group: 'nature'
 	},
-	{ index: 537, name: 'Snail', key: 'snail', group: 'nature', skinTone: '' },
-	{ index: 538, name: 'Bug', key: 'bug', group: 'nature', skinTone: '' },
-	{ index: 539, name: 'Ant', key: 'ant', group: 'nature', skinTone: '' },
+	{ index: 537, name: 'Snail', key: 'snail', group: 'nature' },
+	{ index: 538, name: 'Bug', key: 'bug', group: 'nature' },
+	{ index: 539, name: 'Ant', key: 'ant', group: 'nature' },
 	{
 		index: 540,
 		name: 'Honeybee',
@@ -3323,7 +3323,7 @@ export const emojisList = [
 		key: 'white-flower',
 		group: 'nature'
 	},
-	{ index: 545, name: 'Rose', key: 'rose', group: 'nature', skinTone: '' },
+	{ index: 545, name: 'Rose', key: 'rose', group: 'nature' },
 	{
 		index: 546,
 		name: 'Hibiscus',
@@ -3342,7 +3342,7 @@ export const emojisList = [
 		key: 'blossom',
 		group: 'nature'
 	},
-	{ index: 549, name: 'Tulip', key: 'tulip', group: 'nature', skinTone: '' },
+	{ index: 549, name: 'Tulip', key: 'tulip', group: 'nature' },
 	{
 		index: 550,
 		name: 'Seedling',
@@ -3379,7 +3379,7 @@ export const emojisList = [
 		key: 'sheaf-of-rice',
 		group: 'nature'
 	},
-	{ index: 556, name: 'Herb', key: 'herb', group: 'nature', skinTone: '' },
+	{ index: 556, name: 'Herb', key: 'herb', group: 'nature' },
 	{
 		index: 557,
 		name: 'Four Leaf Clover',
@@ -3404,8 +3404,8 @@ export const emojisList = [
 		key: 'leaf-fluttering-in-wind',
 		group: 'nature'
 	},
-	{ index: 561, name: 'Grapes', key: 'grapes', group: 'food', skinTone: '' },
-	{ index: 562, name: 'Melon', key: 'melon', group: 'food', skinTone: '' },
+	{ index: 561, name: 'Grapes', key: 'grapes', group: 'food' },
+	{ index: 562, name: 'Melon', key: 'melon', group: 'food' },
 	{
 		index: 563,
 		name: 'Watermelon',
@@ -3418,8 +3418,8 @@ export const emojisList = [
 		key: 'tangerine',
 		group: 'food'
 	},
-	{ index: 565, name: 'Lemon', key: 'lemon', group: 'food', skinTone: '' },
-	{ index: 566, name: 'Banana', key: 'banana', group: 'food', skinTone: '' },
+	{ index: 565, name: 'Lemon', key: 'lemon', group: 'food' },
+	{ index: 566, name: 'Banana', key: 'banana', group: 'food' },
 	{
 		index: 567,
 		name: 'Pineapple',
@@ -3438,8 +3438,8 @@ export const emojisList = [
 		key: 'green-apple',
 		group: 'food'
 	},
-	{ index: 570, name: 'Pear', key: 'pear', group: 'food', skinTone: '' },
-	{ index: 571, name: 'Peach', key: 'peach', group: 'food', skinTone: '' },
+	{ index: 570, name: 'Pear', key: 'pear', group: 'food' },
+	{ index: 571, name: 'Peach', key: 'peach', group: 'food' },
 	{
 		index: 572,
 		name: 'Cherries',
@@ -3452,7 +3452,7 @@ export const emojisList = [
 		key: 'strawberry',
 		group: 'food'
 	},
-	{ index: 574, name: 'Tomato', key: 'tomato', group: 'food', skinTone: '' },
+	{ index: 574, name: 'Tomato', key: 'tomato', group: 'food' },
 	{
 		index: 575,
 		name: 'Eggplant',
@@ -3477,7 +3477,7 @@ export const emojisList = [
 		key: 'chestnut',
 		group: 'nature'
 	},
-	{ index: 579, name: 'Bread', key: 'bread', group: 'food', skinTone: '' },
+	{ index: 579, name: 'Bread', key: 'bread', group: 'food' },
 	{
 		index: 580,
 		name: 'Meat on Bone',
@@ -3502,7 +3502,7 @@ export const emojisList = [
 		key: 'french-fries',
 		group: 'food'
 	},
-	{ index: 584, name: 'Pizza', key: 'pizza', group: 'food', skinTone: '' },
+	{ index: 584, name: 'Pizza', key: 'pizza', group: 'food' },
 	{
 		index: 585,
 		name: 'Cooking',
@@ -3563,8 +3563,8 @@ export const emojisList = [
 		key: 'roasted-sweet-potato',
 		group: 'food'
 	},
-	{ index: 595, name: 'Oden', key: 'oden', group: 'food', skinTone: '' },
-	{ index: 596, name: 'Sushi', key: 'sushi', group: 'food', skinTone: '' },
+	{ index: 595, name: 'Oden', key: 'oden', group: 'food' },
+	{ index: 596, name: 'Sushi', key: 'sushi', group: 'food' },
 	{
 		index: 597,
 		name: 'Fried Shrimp',
@@ -3577,7 +3577,7 @@ export const emojisList = [
 		key: 'fish-cake-with-swirl',
 		group: 'food'
 	},
-	{ index: 599, name: 'Dango', key: 'dango', group: 'food', skinTone: '' },
+	{ index: 599, name: 'Dango', key: 'dango', group: 'food' },
 	{
 		index: 600,
 		name: 'Soft Ice Cream',
@@ -3602,7 +3602,7 @@ export const emojisList = [
 		key: 'doughnut',
 		group: 'food'
 	},
-	{ index: 604, name: 'Cookie', key: 'cookie', group: 'food', skinTone: '' },
+	{ index: 604, name: 'Cookie', key: 'cookie', group: 'food' },
 	{
 		index: 605,
 		name: 'Birthday Cake',
@@ -3621,7 +3621,7 @@ export const emojisList = [
 		key: 'chocolate-bar',
 		group: 'food'
 	},
-	{ index: 608, name: 'Candy', key: 'candy', group: 'food', skinTone: '' },
+	{ index: 608, name: 'Candy', key: 'candy', group: 'food' },
 	{
 		index: 609,
 		name: 'Lollipop',
@@ -3658,7 +3658,7 @@ export const emojisList = [
 		key: 'teacup-without-handle',
 		group: 'food'
 	},
-	{ index: 615, name: 'Sake', key: 'sake', group: 'food', skinTone: '' },
+	{ index: 615, name: 'Sake', key: 'sake', group: 'food' },
 	{
 		index: 616,
 		name: 'Wine Glass',
@@ -4235,7 +4235,7 @@ export const emojisList = [
 		key: 'hourglass-not-done',
 		group: 'objects'
 	},
-	{ index: 712, name: 'Watch', key: 'watch', group: 'objects', skinTone: '' },
+	{ index: 712, name: 'Watch', key: 'watch', group: 'objects' },
 	{
 		index: 713,
 		name: 'Alarm Clock',
@@ -4458,7 +4458,7 @@ export const emojisList = [
 		key: 'last-quarter-moon-face',
 		group: 'nature'
 	},
-	{ index: 750, name: 'Sun', key: 'sun', group: 'nature', skinTone: '' },
+	{ index: 750, name: 'Sun', key: 'sun', group: 'nature' },
 	{
 		index: 751,
 		name: 'Full Moon Face',
@@ -4471,7 +4471,7 @@ export const emojisList = [
 		key: 'sun-with-face',
 		group: 'nature'
 	},
-	{ index: 753, name: 'Star', key: 'star', group: 'nature', skinTone: '' },
+	{ index: 753, name: 'Star', key: 'star', group: 'nature' },
 	{
 		index: 754,
 		name: 'Glowing Star',
@@ -4490,7 +4490,7 @@ export const emojisList = [
 		key: 'milky-way',
 		group: 'travel-place'
 	},
-	{ index: 757, name: 'Cloud', key: 'cloud', group: 'nature', skinTone: '' },
+	{ index: 757, name: 'Cloud', key: 'cloud', group: 'nature' },
 	{
 		index: 758,
 		name: 'Sun Behind Cloud',
@@ -4539,7 +4539,7 @@ export const emojisList = [
 		key: 'snowman-without-snow',
 		group: 'nature'
 	},
-	{ index: 766, name: 'Fire', key: 'fire', group: 'nature', skinTone: '' },
+	{ index: 766, name: 'Fire', key: 'fire', group: 'nature' },
 	{
 		index: 767,
 		name: 'Droplet',
@@ -4720,7 +4720,7 @@ export const emojisList = [
 		key: 'running-shirt',
 		group: 'activity'
 	},
-	{ index: 797, name: 'Skis', key: 'skis', group: 'activity', skinTone: '' },
+	{ index: 797, name: 'Skis', key: 'skis', group: 'activity' },
 	{
 		index: 798,
 		name: 'Bullseye',
@@ -4781,7 +4781,7 @@ export const emojisList = [
 		key: 'club-suit',
 		group: 'symbols'
 	},
-	{ index: 808, name: 'Joker', key: 'joker', group: 'symbols', skinTone: '' },
+	{ index: 808, name: 'Joker', key: 'joker', group: 'symbols' },
 	{
 		index: 809,
 		name: 'Mahjong Red Dragon',
@@ -4824,8 +4824,8 @@ export const emojisList = [
 		key: 't-shirt',
 		group: 'people'
 	},
-	{ index: 816, name: 'Jeans', key: 'jeans', group: 'people', skinTone: '' },
-	{ index: 817, name: 'Dress', key: 'dress', group: 'people', skinTone: '' },
+	{ index: 816, name: 'Jeans', key: 'jeans', group: 'people' },
+	{ index: 817, name: 'Dress', key: 'dress', group: 'people' },
 	{
 		index: 818,
 		name: 'Kimono',
@@ -4844,7 +4844,7 @@ export const emojisList = [
 		key: 'womans-clothes',
 		group: 'people'
 	},
-	{ index: 821, name: 'Purse', key: 'purse', group: 'people', skinTone: '' },
+	{ index: 821, name: 'Purse', key: 'purse', group: 'people' },
 	{
 		index: 822,
 		name: 'Handbag',
@@ -4893,7 +4893,7 @@ export const emojisList = [
 		key: 'womans-boot',
 		group: 'people'
 	},
-	{ index: 830, name: 'Crown', key: 'crown', group: 'people', skinTone: '' },
+	{ index: 830, name: 'Crown', key: 'crown', group: 'people' },
 	{
 		index: 831,
 		name: 'Woman’s Hat',
@@ -4918,7 +4918,7 @@ export const emojisList = [
 		key: 'lipstick',
 		group: 'people'
 	},
-	{ index: 835, name: 'Ring', key: 'ring', group: 'people', skinTone: '' },
+	{ index: 835, name: 'Ring', key: 'ring', group: 'people' },
 	{
 		index: 836,
 		name: 'Gem Stone',
@@ -4967,7 +4967,7 @@ export const emojisList = [
 		key: 'postal-horn',
 		group: 'objects'
 	},
-	{ index: 844, name: 'Bell', key: 'bell', group: 'symbols', skinTone: '' },
+	{ index: 844, name: 'Bell', key: 'bell', group: 'symbols' },
 	{
 		index: 845,
 		name: 'Bell with Slash',
@@ -5004,7 +5004,7 @@ export const emojisList = [
 		key: 'headphone',
 		group: 'activity'
 	},
-	{ index: 851, name: 'Radio', key: 'radio', group: 'objects', skinTone: '' },
+	{ index: 851, name: 'Radio', key: 'radio', group: 'objects' },
 	{
 		index: 852,
 		name: 'Saxophone',
@@ -5059,7 +5059,7 @@ export const emojisList = [
 		key: 'telephone-receiver',
 		group: 'objects'
 	},
-	{ index: 861, name: 'Pager', key: 'pager', group: 'objects', skinTone: '' },
+	{ index: 861, name: 'Pager', key: 'pager', group: 'objects' },
 	{
 		index: 862,
 		name: 'Fax Machine',
@@ -5102,7 +5102,7 @@ export const emojisList = [
 		key: 'optical-disk',
 		group: 'objects'
 	},
-	{ index: 869, name: 'DVD', key: 'dvd', group: 'objects', skinTone: '' },
+	{ index: 869, name: 'DVD', key: 'dvd', group: 'objects' },
 	{
 		index: 870,
 		name: 'Movie Camera',
@@ -5205,7 +5205,7 @@ export const emojisList = [
 		key: 'orange-book',
 		group: 'objects'
 	},
-	{ index: 887, name: 'Books', key: 'books', group: 'objects', skinTone: '' },
+	{ index: 887, name: 'Books', key: 'books', group: 'objects' },
 	{
 		index: 888,
 		name: 'Notebook',
@@ -5386,7 +5386,7 @@ export const emojisList = [
 		key: 'black-nib',
 		group: 'objects'
 	},
-	{ index: 918, name: 'Memo', key: 'memo', group: 'objects', skinTone: '' },
+	{ index: 918, name: 'Memo', key: 'memo', group: 'objects' },
 	{
 		index: 919,
 		name: 'Briefcase',
@@ -5507,7 +5507,7 @@ export const emojisList = [
 		key: 'locked-with-key',
 		group: 'objects'
 	},
-	{ index: 939, name: 'Key', key: 'key', group: 'objects', skinTone: '' },
+	{ index: 939, name: 'Key', key: 'key', group: 'objects' },
 	{
 		index: 940,
 		name: 'Hammer',
@@ -5532,7 +5532,7 @@ export const emojisList = [
 		key: 'nut-and-bolt',
 		group: 'objects'
 	},
-	{ index: 944, name: 'Link', key: 'link', group: 'objects', skinTone: '' },
+	{ index: 944, name: 'Link', key: 'link', group: 'objects' },
 	{
 		index: 945,
 		name: 'Microscope',
@@ -5557,8 +5557,8 @@ export const emojisList = [
 		key: 'syringe',
 		group: 'objects'
 	},
-	{ index: 949, name: 'Pill', key: 'pill', group: 'objects', skinTone: '' },
-	{ index: 950, name: 'Door', key: 'door', group: 'objects', skinTone: '' },
+	{ index: 949, name: 'Pill', key: 'pill', group: 'objects' },
+	{ index: 950, name: 'Door', key: 'door', group: 'objects' },
 	{
 		index: 951,
 		name: 'Toilet',
@@ -5583,7 +5583,7 @@ export const emojisList = [
 		key: 'cigarette',
 		group: 'objects'
 	},
-	{ index: 955, name: 'Moai', key: 'moai', group: 'objects', skinTone: '' },
+	{ index: 955, name: 'Moai', key: 'moai', group: 'objects' },
 	{
 		index: 956,
 		name: 'ATM Sign',
@@ -5884,7 +5884,7 @@ export const emojisList = [
 		key: 'cancer',
 		group: 'symbols'
 	},
-	{ index: 1006, name: 'Leo', key: 'leo', group: 'symbols', skinTone: '' },
+	{ index: 1006, name: 'Leo', key: 'leo', group: 'symbols' },
 	{
 		index: 1007,
 		name: 'Virgo',
@@ -6041,7 +6041,7 @@ export const emojisList = [
 		key: 'multiply',
 		group: 'symbols'
 	},
-	{ index: 1033, name: 'Plus', key: 'plus', group: 'symbols', skinTone: '' },
+	{ index: 1033, name: 'Plus', key: 'plus', group: 'symbols' },
 	{
 		index: 1034,
 		name: 'Minus',

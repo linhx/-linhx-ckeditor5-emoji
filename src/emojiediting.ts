@@ -1,9 +1,14 @@
 import { type Element, type DowncastWriter } from 'ckeditor5/src/engine';
 import { Widget, toWidget, viewToModelPositionOutsideModelElement } from 'ckeditor5/src/widget';
-import { Plugin } from 'ckeditor5/src/core';
-import { EMOJI_CLASS_PREFIX } from './constants';
+import { Plugin, type Editor } from 'ckeditor5/src/core';
+import { ATTR_NAME, EMOJI_CLASSES_PREFIX, EMOJI_CLASS_PREFIX, HTML_TAG_NAME, SCHEMA_NAME } from './constants';
+
+const ATTR_FOR_VIEW_ELEMENT_MATCHER = 'emoji';
 
 export default class EmojiEditing extends Plugin {
+	private classesPrefix: string;
+	private classPrefix: string;
+
 	public static override get requires(): Array<typeof Plugin> {
 		return [ Widget ];
 	}
@@ -11,21 +16,28 @@ export default class EmojiEditing extends Plugin {
 		return 'EmojiEditing';
 	}
 
+	public constructor( editor: Editor ) {
+		super( editor );
+		this.classesPrefix = EMOJI_CLASSES_PREFIX || this.editor.config.get( 'emoji.classesPrefix' );
+		this.classPrefix = EMOJI_CLASS_PREFIX || this.editor.config.get( 'emoji.classPrefix' );
+	}
+
 	public override init(): void {
 		this._defineSchema();
 		this._defineConverters();
 		this.editor.editing.mapper.on(
 			'viewToModelPosition',
-			viewToModelPositionOutsideModelElement( this.editor.model, viewElement => viewElement.hasAttribute( 'emoji' ) )
+			viewToModelPositionOutsideModelElement( this.editor.model,
+				viewElement => viewElement.hasAttribute( ATTR_FOR_VIEW_ELEMENT_MATCHER ) )
 		);
 	}
 
 	private _defineSchema(): void {
 		const schema = this.editor.model.schema;
 
-		schema.register( 'emoji', {
+		schema.register( SCHEMA_NAME, {
 			inheritAllFrom: '$text',
-			allowAttributes: [ 'emojiName' ]
+			allowAttributes: [ ATTR_NAME ]
 		} );
 	}
 
@@ -33,11 +45,11 @@ export default class EmojiEditing extends Plugin {
 		const conversion = this.editor.conversion;
 
 		const createEmojiElement = ( element: Element, writer: DowncastWriter ) => {
-			const emojiName = String( element.getAttribute( 'emojiName' ) );
+			const emojiName = String( element.getAttribute( ATTR_NAME ) );
 
-			const emoji = writer.createContainerElement( 'emoji', {
-				class: `${ EMOJI_CLASS_PREFIX }${ emojiName }`,
-				emoji: emojiName // for viewToModelPositionOutsideModelElement
+			const emoji = writer.createContainerElement( HTML_TAG_NAME, {
+				class: `${ this.classesPrefix }${ emojiName }`,
+				[ ATTR_FOR_VIEW_ELEMENT_MATCHER ]: emojiName // for viewToModelPositionOutsideModelElement
 			} );
 			const innerText = writer.createText( ':' + emojiName + ':' );
 			writer.insert( writer.createPositionAt( emoji, 0 ), innerText );
@@ -45,13 +57,13 @@ export default class EmojiEditing extends Plugin {
 		};
 
 		conversion.for( 'dataDowncast' ).elementToElement( {
-			model: 'emoji',
+			model: SCHEMA_NAME,
 			view: ( element, conversionApi ) => {
 				return createEmojiElement( element, conversionApi.writer );
 			}
 		} );
 		conversion.for( 'editingDowncast' ).elementToElement( {
-			model: 'emoji',
+			model: SCHEMA_NAME,
 			view: ( modelItem, { writer: viewWriter } ) => {
 				const emojiElement = createEmojiElement( modelItem, viewWriter );
 
@@ -61,14 +73,20 @@ export default class EmojiEditing extends Plugin {
 
 		conversion.for( 'upcast' ).elementToElement( {
 			view: {
-				name: 'emoji',
-				classes: [ 'ap' ]
+				name: HTML_TAG_NAME,
+				classes: [ 'em' ]
 			},
 			model: ( viewElement, { writer: modelWriter } ) => {
-				const clazz = viewElement.getAttribute( 'class' );
+				const classes = viewElement.getClassNames();
 
-				const emojiName = clazz ? clazz.substring( EMOJI_CLASS_PREFIX.length ) : '';
-				return modelWriter.createElement( 'emoji', { emojiName } );
+				for ( const clazz of classes ) {
+					if ( clazz.startsWith( this.classPrefix ) ) {
+						return modelWriter.createElement( SCHEMA_NAME, {
+							[ ATTR_NAME ]: clazz.substring( this.classPrefix.length )
+						} );
+					}
+				}
+				return null;
 			}
 		} );
 	}

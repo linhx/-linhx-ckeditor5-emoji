@@ -5,14 +5,15 @@ import {
 } from 'ckeditor5/src/ui';
 
 import '../theme/emojis-dropdown.css';
+import type EmojiNavigationView from './emojinavigationview';
 
 export default class EmojisView extends View {
 	private items: ViewCollection<View>;
 	private focusTracker: FocusTracker;
-	private navigationView: View;
+	private navigationView: EmojiNavigationView;
 	private gridView: View;
 
-	constructor( locale: Locale, navigationView: View, gridView: View ) {
+	constructor( locale: Locale, navigationView: EmojiNavigationView, gridView: View ) {
 		super( locale );
 
 		this.items = this.createCollection();
@@ -40,5 +41,9 @@ export default class EmojisView extends View {
 		super.destroy();
 
 		this.focusTracker.destroy();
+	}
+
+	public focus(): void {
+		this.navigationView.focus();
 	}
 }

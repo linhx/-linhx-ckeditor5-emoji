@@ -6,7 +6,7 @@ import ckeditor5Icon from '../theme/icons/grining.svg';
 import EmojiGridView from './emojigridview';
 import EmojiNavigationView from './emojinavigationview';
 import EmojisView from './emojisview';
-import { ALL_EMOJI_GROUPS, ALL_EMOJI_KEYS, DEFAULT_GROUP } from './constants';
+import { ALL_EMOJI_GROUPS, ALL_EMOJI_KEYS, ATTR_NAME, DEFAULT_GROUP, SCHEMA_NAME } from './constants';
 
 export default class EmojiUI extends Plugin {
 	public static override get pluginName(): string {
@@ -37,8 +37,8 @@ export default class EmojiUI extends Plugin {
 
 			dropdownView.on( 'execute', ( evt, data ) => {
 				model.change( writer => {
-					const imageElement = writer.createElement( 'emoji', {
-						emojiName: data.name
+					const imageElement = writer.createElement( SCHEMA_NAME, {
+						[ ATTR_NAME ]: data.name
 					} );
 					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 					// @ts-ignore: avoid error when emoji place at the end of code block,
