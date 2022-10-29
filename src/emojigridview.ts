@@ -50,15 +50,15 @@ export default class EmojiGridView extends View {
 		this.focusTracker = new FocusTracker();
 	}
 
-	public createTile( key: string, name?: string ): View {
+	public createTile( emoji: Emoji ): View {
 		const tile = new ButtonView( this.locale );
 
 		const bind = tile.bindTemplate;
 		tile.setTemplate( {
 			tag: 'button',
 			attributes: {
-				title: name || '',
-				class: `em-grid-item ${ this.classesPrefix }${ key }`
+				title: emoji.name || '',
+				class: `em-grid-item ${ this.classesPrefix }${ emoji.key }`
 			},
 			on: {
 				mousedown: bind.to( evt => {
@@ -76,7 +76,7 @@ export default class EmojiGridView extends View {
 		} );
 
 		tile.on( 'execute', () => {
-			this.fire( 'execute', { key, name } as Emoji );
+			this.fire( 'execute', emoji );
 		} );
 
 		return tile;

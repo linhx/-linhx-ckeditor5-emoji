@@ -55,9 +55,9 @@ describe( 'Emoji', () => {
 
 			expect( editor.getData() ).to.equal( '' );
 
-			icon.fire( 'execute', { name: 'grinning' } );
+			icon.fire( 'execute', { key: 'grinning', unicode: 'grinning' } );
 
-			expect( editor.getData() ).to.equal( '<p><emoji class="em em-grinning" emoji="grinning">:grinning:</emoji></p>' );
+			expect( editor.getData() ).to.equal( '<p><span class="em em-grinning">grinning</span></p>' );
 		} );
 	} );
 } );

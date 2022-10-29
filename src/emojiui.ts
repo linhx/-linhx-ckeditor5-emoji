@@ -13,7 +13,7 @@ import {
 	type Emoji,
 	EMOJI_CLASS,
 	getClassesPrefix,
-	SCHEMA_NAME
+	SCHEMA_NAME,
 } from './constants';
 
 export default class EmojiUI extends Plugin {
@@ -100,7 +100,7 @@ export default class EmojiUI extends Plugin {
 		}
 
 		for ( const emojiData of emojiDatas ) {
-			gridView.addTitle( gridView.createTile( emojiData.key, emojiData.name ) );
+			gridView.addTitle( gridView.createTile( emojiData ) );
 		}
 	}
 

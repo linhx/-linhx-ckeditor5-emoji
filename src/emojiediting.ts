@@ -68,8 +68,6 @@ export default class EmojiEditing extends Plugin {
 			const emoji = writer.createContainerElement( this.tagName, {
 				class: `${ this.classesPrefix }${ emojiKey }`
 			} );
-			const innerText = writer.createText( ':' + emojiKey + ':' );
-			writer.insert( writer.createPositionAt( emoji, 0 ), innerText );
 			return emoji;
 		};
 
