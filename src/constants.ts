@@ -1,6 +1,6 @@
-import { emojisList } from './emojisList';
+import { emojisList, groupPeople } from './emojisList';
 
-export const DEFAULT_GROUP = 'people';
+export const DEFAULT_GROUP = groupPeople;
 
 export type Emoji = { key: string; name?: string };
 
