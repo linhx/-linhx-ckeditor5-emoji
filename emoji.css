@@ -6,13 +6,17 @@
 }
 
 .emoji.emoji-grid__tiles > .em,
-.ck-editor__main .em {
+.ck-editor .em {
 	background-image: url("./emojis.png");
 	background-repeat: no-repeat;
 	display: inline-block;
 }
 
-.ck-editor__main .em {
+.ck-editor .ck-content .em {
+	margin-top: -4px;
+}
+
+.ck-editor .em {
 	width: var(--display-emoji-size);
 	height: var(--display-emoji-size);
 	background-size: calc(
@@ -21,7 +25,6 @@
 		)
 		auto;
 	vertical-align: middle;
-	margin-top: -4px;
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -3570,3 +3573,4 @@
 .em.em-flag-south-africa {
 	background-position: calc(-34 * 1.5em) calc(-24 * 1.5em);
 }
+
