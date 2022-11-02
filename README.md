@@ -14,22 +14,15 @@ Read [Installing plugins](https://ckeditor.com/docs/ckeditor5/latest/installatio
 
 Add to toolbar
 
-```
+```javascript
     toolbar: {
-
         items: [
-
             ...
-
             'emoji',
-
             ...
-
         ]
-
     },
 ```
-
 
 ### Style and Emoji sprite
 
